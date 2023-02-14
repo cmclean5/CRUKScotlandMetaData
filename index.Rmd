@@ -1,5 +1,5 @@
 ---
-title: "CRUK Scotland MetaData Catalgue"
+title: "CRUK Scotland MetaData Catalogue"
 output: 
   flexdashboard::flex_dashboard:
     orientation: rows
@@ -16,6 +16,9 @@ library(stringr)
 library(dplyr)
 library(here)
 library(shiny)
+
+## How to add Rmarkdown flxdashboard to github,
+## Ref: https://www.r-bloggers.com/2020/09/deploying-flexdashboard-on-github-pages/
 
 source(here("Scripts/loadFunctions.R"))
 
