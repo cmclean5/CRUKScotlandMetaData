@@ -1,9 +1,15 @@
 ---
-title: "CRUK Scotland MetaData Catalogue"
+title: "CRUKScotland MetaData Catalogue"
 output: 
   flexdashboard::flex_dashboard:
+    theme: 
+      version: 5
+      bootswatch: cosmo #flatly
+    source_code: embed
     orientation: rows
     vertical_layout: fill
+    navbar:
+      - { href: https://github.com/cmclean5/CRUKScotlandMetaData, align: right, icon: "fa-github" }
 ---
 
 ```{r setup, include=FALSE}
@@ -90,6 +96,9 @@ ICONS=c("fa-hospital-symbol","fa-file-medical")
    ##Ccols   = c("info","warning","primary","success")
    Ccols  = rep("#f5a5dc",length(Cvals))
 ```
+
+Summary
+=======================================================================
 
 Row1
 ----------------------------------------------
@@ -189,8 +198,6 @@ valueBox(Cvals[8],
 Row3
 ----------------------------------------------
 
-### MetaData Table
-
 ```{r display table, echo=FALSE}
    reactable(df, 
              groupBy=c("Cancer","Site"),
@@ -223,4 +230,21 @@ Row3
              )
 ```
 
+About
+=======================================================================
 
+**The CRUK MetaData Dashboard**
+
+This dashboard is built with R using the Rmakrdown framework and can easily reproduce by others. The code behind the dashboard available [here](https://github.com/cmclean5/CRUKScotlandMetaData)
+
+**Data**
+
+**Packages**
+
+* Dashboard interface - the [flexdashboard](https://rmarkdown.rstudio.com/flexdashboard/) package. 
+* Data manipulation - [dplyr](https://dplyr.tidyverse.org/), and [tidyr](https://tidyr.tidyverse.org/)
+* Tables - the [DT](https://rstudio.github.io/DT/) package
+
+**Deployment and reproducibly**
+
+The dashboard was deployed to Github docs. 
