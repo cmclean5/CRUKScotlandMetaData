@@ -1,0 +1,112 @@
+---
+title: "Datasets"
+description: |
+  Description of routinely collected national NHS datasets used for analysts defining cancer cohorts.
+author:
+  - name: Peter Hall 
+    url: https://www.ed.ac.uk/profile/peter-hall
+    affiliation: Edinburgh Cancer Research Centre, University of Edinburgh
+    affiliation_url: https://www.ed.ac.uk/cancer-centre
+  - name: Mah&eacute;va Vallet
+    url: https://www.ed.ac.uk/profile/maheva-vallet
+    affiliation: Edinburgh Cancer Research Centre, University of Edinburgh
+    affiliation_url: https://www.ed.ac.uk/cancer-centre
+  - name: Giovanni Tramonti
+    url: 
+    affiliation: Edinburgh Cancer Research Centre, University of Edinburgh
+    affiliation_url: https://www.ed.ac.uk/cancer-centre
+date: "`r Sys.Date()`"
+output: 
+  distill::distill_article:
+    code_folding: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(cache=TRUE, echo=FALSE)
+options(kable.auto_format=FALSE)
+source("Scripts/Setup.R", local=knitr::knit_global())
+```
+
+# SMR01 
+
+ http://www.ndc.scot.nhs.uk/Data-Dictionary/SMR-Datasets//SMR01-General-Acute-Inpatient-and-Day-Case/
+
+A SMR01 is generated for patients receiving care in the General/ Acute specialties when the following events occur:
+
+1. Inpatients and day cases are admitted to NHS hospitals from locations external to the NHS.
+
+2. Inpatients and day cases are admitted to contracted NHS beds in non-NHS institutions.
+
+3. Inpatients and day cases change specialty (with or without a change of consultant) when:
+    a. An Inpatient transfers to become an Inpatient in another specialty in the same hospital.
+    b. An inpatient becomes a Day Case in another specialty during the inpatient stay.
+    c. A day case transfers to become an Inpatient in another specialty (except when the day case episode is during an  
+   inpatient stay and the patient is transferring back to the original consultant).
+    d. A day case transfers back to resume an Inpatient stay but does NOT transfer back to the original consultant for 
+   medical reasons.
+    e. Inpatients and day cases transfer from another NHS hospital (including contracted NHS beds in non-NHS institutions).
+    f. Inpatients and day cases change consultant for medical reasons within the same specialty when:
+        i. An inpatient transfers as an Inpatient to the care of a different consultant for medical reasons in the same
+        specialty in the same hospital.
+        ii. An inpatient becomes a Day Case in the same specialty under a different consultant for medical reasons during
+        the inpatient stay.
+        iii. A day case transfers to become an Inpatient under the care of a different consultant in the same specialty
+        for medical reasons (except when the day case episode is during an inpatient stay and the patient is transferring
+        back to the original consultant).
+        iv. A day case transfers back to resume an Inpatient stay in the same specialty but does NOT transfer back to the
+        original consultant for medical reasons.
+        v. Inpatients move into and/or out of one of the valid significant facilities.
+        vi. Inpatients return to hospital having been on pass for more than 5 days.
+
+# SMR06
+
+http://www.isdscotland.org/Health-Topics/Cancer/Scottish-Cancer-Registry/
+
+SMR06 is derived from SOCRATES.
+
+Cancer Registration is the collection, maintenance and management of data on every new diagnosis of cancer occurring in a population. In Scotland, approximately 55,000 cancer registrations are made annually. The Scottish Cancer Registry database holds over 1,800,000 records dating back to 1958, when the registry began.
+
+Cancer registries are unique in being able to provide historical trend and population-based data to monitor changes in cancer incidence and survival over long periods of time. Cancer registries across the world share the same main objective: to deliver timely, comparable and high-quality cancer data.
+
+The Scottish Cancer Registry contains information on all new cases of cancer including primary malignant neoplasms, carcinoma in situ, neoplasms of uncertain behaviour and benign brain and spinal cord tumours.
+
+The data is in flat .dat file format and a file layout is needed in order to determine the location of each variable. Please note that the file layout can change over time so ensure that the correct file layout version is used.
+
+## Data Quirks
+
+### ICDO Codes
+
+International classification of diseases for oncology (ICD-O) codes are recorded in SMR06 with codes for both morphology and site.
+
+Tumour type indicates the morphology (histology) of the tumour and comprises of the first four digits of the ICD-O morphology code and a fifth digit which denotes the behaviour of the tumour.
+
+```{r ICDO-Codes-SMR06}
+    df = cbind(c("0","1","2","3","6","9"),
+               c("Benign","Uncertain whether benign or malignant","Carcinoma in situ",
+                 "Malignant - primary site", "Malignant - metastatic site or secondary site",
+                 "Malignant - uncertain whether primary or metastatic site"))
+    colnames(df) = c("Code","Description")
+    knitr::kable( df, caption="") %>% kable_styling()
+```
+
+### Diagnosis on the same day
+
+It is possible for patients to be diagnosed with multiple primary tumours on the same day; this must be accounted for when looking at patient history as these tumours can potentially be flagged as tumour history.
+
+### Non Lothian Residents
+
+On average 36% of patients in SMR06 each year are non-Lothian residents. These patients have been removed from the analysis as the data for their full history lies with the health board of residence which at the moment there is no access to.
+
+To see a breakdown by treatment type please see the summary table.
+
+For access please contact Analytical Services or NHS Lothian Research Safe Haven
+
+# Oncology Database
+
+# CHI Files
+
+# Chemocare (SACT)
+
+# SCAN Audit
+
+# Prescribing Information System (PIS)

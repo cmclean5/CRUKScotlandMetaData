@@ -1,0 +1,60 @@
+---
+title: "&#32;"
+author:
+#  - name: Colin Mclean
+#    url: https://www.research.ed.ac.uk/en/persons/colin-mclean
+#    affiliation: Edinburgh Cancer Research Centre, University of Edinburgh
+#    affiliation_url: https://www.ed.ac.uk/cancer-centre
+#date: "`r Sys.Date()`"
+output: 
+  distill::distill_article:
+    sef_contained: false
+    code_folding: false
+---
+
+```{r setup, include=FALSE}
+  knitr::opts_chunk$set(cache=TRUE, echo=FALSE,
+                        widgetframe_self_contained=FALSE,
+                        widgetframe_isolate_widgets=TRUE)
+
+# set hook for dealing with large images in html
+knitr::knit_hooks$set(class = function(before, options, envir) {
+  if(before){
+    sprintf("<div class = '%s'>", options$class)
+  }else{
+    "</div>"
+  }
+})
+
+## set hook for dealing with large images in html
+#knitr::knit_hooks$set(class = function(before, options, envir) {
+#  if(before){
+#    sprintf("<iframe class = '%s'>", options$class)
+#  }else{
+#    "</iframe>"
+#  }
+#})
+
+```
+
+<!--<div class="dashboard">
+<iframe src="https://cmclean5.github.io/CRUKScotlandMetaData/index.html", data-external="1">
+</iframe>
+</div>-->
+
+```{r show.dashboard, layout="l-screen-inset", echo=FALSE}
+knitr::include_url("static/docs/index.html", height=800)
+```
+
+<!--
+```{r show.dashboard2, layout="l-screen-inset", out.height=1000, echo=FALSE}
+htmltools::tags$iframe(src = "static/docs/index.html",
+    scrolling = "no",
+    frameBordder = "0",
+    height="100%",
+    width="100%"
+    ##data-external="1"
+  )
+```
+-->
+
