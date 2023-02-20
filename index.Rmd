@@ -1,7 +1,7 @@
 ---
 title: "CRUK Scotland Meta Data Catalogue"
 description: |
-  Cancer Meta Data Catalogue derived from Scottish datasets.
+  Meta Data Catalogue derived from Scottish Cancer Datasets.
 author:
   - name: Peter Hall 
     url: https://www.ed.ac.uk/profile/peter-hall
