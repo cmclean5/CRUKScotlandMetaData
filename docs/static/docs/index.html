@@ -1,0 +1,2292 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+<title>CRUKScotland MetaData Catalogue</title>
+
+<meta property="og:title" content="CRUKScotland MetaData Catalogue" />
+
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+
+<link rel="icon" href="data:image/x-icon;" type="image/x-icon">
+
+
+<script type="text/javascript">
+window.FlexDashboardComponents = [];
+</script>
+
+<script id="flexdashboard-navbar" type="application/json">
+[{"href":"https://github.com/cmclean5/CRUKScotlandMetaData","align":"right","icon":"fa-github"},{"title":"Source Code","icon":"fa-code","href":"source_embed","align":"right"}]
+</script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<link href="site_libs/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-5.1.0/bootstrap.bundle.min.js"></script>
+<script src="site_libs/bs3compat-0.3.1/transition.js"></script>
+<script src="site_libs/bs3compat-0.3.1/tabs.js"></script>
+<script src="site_libs/bs3compat-0.3.1/bs3compat.js"></script>
+<link href="site_libs/flexdashboard-css-0.6.1/flexdashboard-css.css" rel="stylesheet" />
+<script src="site_libs/stickytableheaders-0.1.19/jquery.stickytableheaders.min.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/featherlight-1.3.5/featherlight.min.css" rel="stylesheet" />
+<script src="site_libs/featherlight-1.3.5/featherlight.min.js"></script>
+<link href="site_libs/prism-1.4.1/prism.css" rel="stylesheet" />
+<script src="site_libs/prism-1.4.1/prism.js"></script>
+<link href="site_libs/value-box-core-0.6.1/value-box.css" rel="stylesheet" />
+<script src="site_libs/core-js-2.5.3/shim.min.js"></script>
+<script src="site_libs/react-17.0.0/react.min.js"></script>
+<script src="site_libs/react-17.0.0/react-dom.min.js"></script>
+<script src="site_libs/reactwidget-1.0.0/react-tools.js"></script>
+<script src="site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<link href="site_libs/reactable-0.4.3/reactable.css" rel="stylesheet" />
+<script src="site_libs/reactable-binding-0.4.3/reactable.js"></script>
+<style type="text/css">
+/*
+  CSS for flexdashboard.js' use of Sly(). The sizing/position of this CSS needs to be
+  applied _before_ flexdashboard.js initializes, which is why this CSS has been pulled
+  out from flexdashboard.scss and inlined in the document's head.
+*/
+
+.storyboard-nav button {
+  background: transparent;
+  border: 0;
+  opacity: .3;
+  outline: none;
+  padding: 0;
+}
+
+.storyboard-nav button:hover,
+.storyboard-nav button:hover {
+  opacity: .5;
+}
+
+.storyboard-nav button:disabled,
+.storyboard-nav button:disabled {
+  opacity: .1;
+}
+
+.storyboard-nav .sbnext,
+.storyboard-nav .sbprev {
+  float: left;
+  width: 2%;
+  height: 120px;
+}
+
+.storyboard-nav .sbprev {
+  text-align: left;
+  width: 2%;
+}
+
+.storyboard-nav .sbnext {
+  float: right;
+  text-align: right;
+  margin-right: 8px;
+}
+
+.storyboard-nav .sbframelist {
+  margin: 0 auto;
+  width: 94%;
+  height: 120px;
+  overflow: hidden;
+  text-shadow: none;
+  margin-bottom: 8px;
+}
+
+.storyboard-nav .sbframelist ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.storyboard-nav .sbframelist ul li {
+  float: left;
+  width: 270px;
+  height: 100%;
+  padding: 10px 10px 10px 10px;
+  margin-right: 8px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.storyboard-nav .sbframelist ul li:last-child {
+  margin-right: 0px;
+}
+
+.sbframe-commentary {
+  width: 300px;
+}
+
+.sbframe-commentary ul {
+  padding-left: 22px;
+}
+
+.sbframe.active {
+  display: flex;
+}
+
+.sbframe:not(.active) {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+html, body {
+  height: 100%;
+}
+
+#dashboard-container {
+  height: 100%;
+}
+}
+</style>
+
+
+
+</head>
+
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<div class="container-fluid">
+<div class="navbar-header">
+
+<span class="navbar-logo pull-left">
+  
+</span>
+<span class="navbar-brand">
+  CRUKScotland MetaData Catalogue
+  <span class="navbar-author">
+        </span>
+</span>
+
+<button id="navbar-button" type="button" class="navbar-toggle collapsed pull-right" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+
+</div>
+<div id="navbar" class="navbar-collapse collapse">
+<ul class="nav navbar-nav navbar-left">
+</ul>
+<ul class="nav navbar-nav navbar-right">
+</ul>
+</div><!--/.nav-collapse-->
+</div><!--/.container-->
+</div><!--/.navbar-->
+
+<script type="text/javascript">
+
+
+var FlexDashboard = (function () {
+
+  // initialize options
+  var _options = {};
+
+  var FlexDashboard = function() {
+
+    // default options
+    _options = $.extend(_options, {
+      theme: "cosmo",
+      fillPage: false,
+      orientation: 'columns',
+      storyboard: false,
+      defaultFigWidth: 576,
+      defaultFigHeight: 461,
+      defaultFigWidthMobile: 360,
+      defaultFigHeightMobile: 461,
+      isMobile: false,
+      isPortrait: false,
+      resize_reload: true
+    });
+  };
+
+  function init(options) {
+
+    // extend default options
+    $.extend(true, _options, options);
+
+    // add ids to sections that don't have them (pandoc won't assign ids
+    // to e.g. sections with titles consisting of only chinese characters)
+    var nextId = 1;
+    $('.level1:not([id]),.level2:not([id]),.level3:not([id])').each(function() {
+      $(this).attr('id', 'dashboard-' + nextId++);
+    });
+
+    // find navbar items
+    var navbarItems = $('#flexdashboard-navbar');
+    if (navbarItems.length)
+      navbarItems = JSON.parse(navbarItems.html());
+    addNavbarItems(navbarItems);
+
+    // find the main dashboard container
+    var dashboardContainer = $('#dashboard-container');
+
+    // resolve mobile classes
+    resolveMobileClasses(dashboardContainer);
+
+    // one time global initialization for components
+    componentsInit(dashboardContainer);
+
+    // look for a global sidebar
+    var globalSidebar = dashboardContainer.find(".section.level1.sidebar");
+    if (globalSidebar.length > 0) {
+
+      // global layout for fullscreen displays
+      if (!isMobilePhone()) {
+
+         // hoist it up to the top level
+         globalSidebar.insertBefore(dashboardContainer);
+
+         // lay it out (set width/positions)
+         layoutSidebar(globalSidebar, dashboardContainer);
+
+      // tuck sidebar into first page for mobile phones
+      } else {
+
+        // convert it into a level3 section
+        globalSidebar.removeClass('sidebar');
+        globalSidebar.removeClass('level1');
+        globalSidebar.addClass('level3');
+        var h1 = globalSidebar.children('h1');
+        var h3 = $('<h3></h3>');
+        h3.append(h1.contents());
+        h3.insertBefore(h1);
+        h1.detach();
+
+        // move it into the first page
+        var page = dashboardContainer.find('.section.level1').first();
+        if (page.length > 0)
+          page.prepend(globalSidebar);
+      }
+    }
+
+    // look for pages to layout
+    var pages = $('div.section.level1');
+    if (pages.length > 0) {
+
+        // find the navbar and collapse on clicked
+        var navbar = $('#navbar');
+        navbar.on("click", "a[data-toggle!=dropdown]", null, function () {
+           navbar.collapse('hide');
+        });
+
+        // envelop the dashboard container in a tab content div
+        dashboardContainer.wrapInner('<div class="tab-content"></div>');
+
+        pages.each(function(index) {
+
+          // lay it out
+          layoutDashboardPage($(this));
+
+          // add it to the navbar
+          addToNavbar($(this), index === 0);
+
+        });
+
+    } else {
+
+      // remove the navbar and navbar button if we don't
+      // have any navbuttons
+      if (navbarItems.length === 0) {
+        $('#navbar').remove();
+        $('#navbar-button').remove();
+      }
+
+      // add the storyboard class if requested
+      if (_options.storyboard)
+        dashboardContainer.addClass('storyboard');
+
+      // layout the entire page
+      layoutDashboardPage(dashboardContainer);
+    }
+
+    // if we are in shiny we need to trigger a window resize event to
+    // force correct layout of shiny-bound-output elements
+    if (isShinyDoc())
+      $(window).trigger('resize');
+
+    // make main components visible
+    $('.section.sidebar').css('visibility', 'visible');
+    dashboardContainer.css('visibility', 'visible');
+
+    // handle location hash
+    handleLocationHash();
+
+    // intialize prism highlighting
+    initPrismHighlighting();
+
+    // record mobile and orientation state then register a handler
+    // to refresh if resize_reload is set to true and it changes
+    _options.isMobile = isMobilePhone();
+    _options.isPortrait = isPortrait();
+    if (_options.resize_reload) {
+      $(window).on('resize', function() {
+        if (_options.isMobile !== isMobilePhone() ||
+            _options.isPortrait !== isPortrait()) {
+          window.location.reload();
+        }
+      });
+    } else {
+      // if in desktop mode and resizing to mobile, make sure the heights are 100%
+      // This enforces what `fillpage.css` does for "wider" pages.
+      // Since we are not reloading once the page becomes small, we need to force the height to 100%
+      // This is a new situation introduced when `_options.resize_reload` is `false`
+      if (! _options.isMobile) {
+        // only add if `fillpage.css` was added in the first place
+        if (_options.fillPage) {
+          // fillpage.css
+          $("html,body,#dashboard").css("height", "100%");
+        }
+      }
+    }
+    // trigger layoutcomplete event
+    dashboardContainer.trigger('flexdashboard:layoutcomplete');
+  }
+
+  function resolveMobileClasses(dashboardContainer) {
+     // add top level layout class
+    dashboardContainer.addClass(isMobilePhone() ? 'mobile-layout' :
+                                                  'desktop-layout');
+
+    // look for .mobile sections and add .no-mobile to their peers
+    var mobileSections = $('.section.mobile');
+    mobileSections.each(function() {
+       var id = $(this).attr('id');
+       var nomobileId = id.replace(/-\d+$/, '');
+       $('#' + nomobileId).addClass('no-mobile');
+    });
+  }
+
+  function addNavbarItems(navbarItems) {
+
+    var navbarLeft = $('ul.navbar-left');
+    var navbarRight = $('ul.navbar-right');
+
+    for (var i = 0; i<navbarItems.length; i++) {
+
+      // get the item
+      var item = navbarItems[i];
+
+      // determine the container
+      var container = null;
+      if (item.align === "left")
+        container = navbarLeft;
+      else
+        container = navbarRight;
+
+      // navbar menu if we have multiple items
+      if (item.items) {
+        var menu = navbarMenu(null, item.icon, item.title, container);
+        for (var j = 0; j<item.items.length; j++) {
+          var subItem = item.items[j];
+          var li = $('<li></li>');
+          var a = navbarLink(subItem.icon, subItem.title, subItem.href, subItem.target);
+          a.removeClass("nav-link").addClass("dropdown-item");
+          li.append(a);
+          menu.append(li);
+        }
+      } else {
+        var li = $('<li class="nav-item"></li>');
+        li.append(navbarLink(item.icon, item.title, item.href, item.target));
+        container.append(li);
+      }
+    }
+  }
+
+  // create or get a reference to an existing dropdown menu
+  function navbarMenu(id, icon, title, container) {
+    var existingMenu = [];
+    if (id)
+      existingMenu = container.children('#' + id);
+    if (existingMenu.length > 0) {
+      return existingMenu.children('ul');
+    } else {
+      var li = $('<li class="nav-item"></li>');
+      if (id)
+        li.attr('id', id);
+      li.addClass('dropdown');
+      // auto add "Share" title on mobile if necessary
+      if (!title && icon && (icon === "fa-share-alt") && isMobilePhone())
+        title = "Share";
+      if (title) {
+        title = title + ' <span class="caret"></span>';
+      }
+      var a = navbarLink(icon, title, "#");
+      a.addClass('dropdown-toggle');
+      a.attr('data-toggle', 'dropdown');
+      a.attr('data-bs-toggle', 'dropdown');
+      a.attr('role', 'button');
+      a.attr('aria-expanded', 'false');
+      li.append(a);
+      var ul = $('<ul class="dropdown-menu"></ul>');
+      ul.attr('role', 'menu');
+      li.append(ul);
+      container.append(li);
+      return ul;
+    }
+  }
+
+  function addToNavbar(page, active) {
+
+    // capture the id and data-icon attribute (if any)
+    var id = page.attr('id');
+    var icon = page.attr('data-icon');
+    var navmenu = page.attr('data-navmenu');
+
+    // get hidden state (transfer this to navbar)
+    var hidden = page.hasClass('hidden');
+    page.removeClass('hidden');
+
+    // sanitize the id for use with bootstrap tabs
+    id = id.replace(/[.\/?&!#<>]/g, '').replace(/\s/g, '_');
+    page.attr('id', id);
+
+    // get the wrapper
+    var wrapper = page.closest('.dashboard-page-wrapper');
+
+    // move the id to the wrapper
+    page.removeAttr('id');
+    wrapper.attr('id', id);
+
+    // add the tab-pane class to the wrapper
+    wrapper.addClass('tab-pane');
+    if (active)
+      wrapper.addClass('active');
+
+    // get a reference to the h1, discover its inner contens, then detach it
+    var h1 = wrapper.find('h1').first();
+    var title = h1.contents();
+    h1.detach();
+
+    // create a navbar item
+    var li = $('<li></li>');
+    var a = navbarLink(icon, title, '#' + id);
+    a.attr('data-toggle', 'tab');
+    li.append(a);
+
+    // add it to the navbar (or navbar menu if specified)
+    var container = $('ul.navbar-left');
+    if (navmenu) {
+      var menuId = navmenu.replace(/\s+/g, '');
+      var menu = navbarMenu(menuId, null, navmenu, container);
+      li.find("> a").removeClass("nav-link").addClass("dropdown-item");
+      menu.append(li);
+    } else {
+      li.addClass("nav-item")
+      container.append(li);
+    }
+
+    // hide it if requested
+    if (hidden)
+      li.addClass('hidden');
+  }
+
+  function navbarLink(icon, title, href, target) {
+
+    var a = $('<a class="nav-link"></a>');
+    if (icon) {
+
+      // get the name of the icon set and icon
+      var dashPos = icon.indexOf("-");
+      var iconSet = null;
+      var iconSplit = icon.split(" ");
+      if (iconSplit.length > 1) {
+        iconSet = iconSplit[0];
+        icon = iconSplit.slice(1).join(" ");
+      } else {
+        iconSet = icon.substring(0, dashPos);
+      }
+      var iconName = icon.substring(dashPos + 1);
+
+      // create the icon
+      var iconElement = $('<span class="' + iconSet + ' ' + icon + '"></span>');
+      if (title)
+        iconElement.css('margin-right', '7px');
+      a.append(iconElement);
+      // if href is null see if we can auto-generate based on icon (e.g. social)
+      if (!href)
+        maybeGenerateLinkFromIcon(iconName, a);
+    }
+    if (title)
+      a.append(title);
+
+    // add the href.
+    if (href) {
+      if (href === "source_embed") {
+        a.attr('href', '#');
+        a.attr('data-featherlight', "#flexdashboard-source-code");
+        a.featherlight({
+            beforeOpen: function(event){
+              $('body').addClass('unselectable');
+            },
+            afterClose: function(event){
+              $('body').removeClass('unselectable');
+            }
+        });
+      } else {
+        a.attr('href', href);
+      }
+    }
+
+    // add the arget
+    if (target)
+      a.attr('target', target);
+
+    return a;
+  }
+
+  // auto generate a link from an icon name (e.g. twitter) when possible
+  function maybeGenerateLinkFromIcon(iconName, a) {
+
+     var serviceLinks = {
+      "twitter": "https://twitter.com/share?text=" + encodeURIComponent(document.title) + "&url="+encodeURIComponent(location.href),
+      "facebook": "https://www.facebook.com/sharer/sharer.php?s=100&p[url]="+encodeURIComponent(location.href),
+      "linkedin": "https://www.linkedin.com/shareArticle?mini=true&url="+encodeURIComponent(location.href) + "&title=" + encodeURIComponent(document.title),
+      "pinterest": "https://pinterest.com/pin/create/link/?url="+encodeURIComponent(location.href) + "&description=" + encodeURIComponent(document.title)
+    };
+
+    var makeSocialLink = function(a, href) {
+      a.attr('href', '#');
+      a.on('click', function(e) {
+        e.preventDefault();
+        window.open(href);
+      });
+    };
+
+    $.each(serviceLinks, function(key, value) {
+      if (iconName.indexOf(key) !== -1)
+        makeSocialLink(a, value);
+    });
+  }
+
+  // layout a dashboard page
+  function layoutDashboardPage(page) {
+
+    // use a page wrapper so that free form content above the
+    // dashboard appears at the top rather than the side (as it
+    // would without the wrapper in a column orientation)
+    var wrapper = $('<div class="dashboard-page-wrapper"></div>');
+    page.wrap(wrapper);
+
+    // if there are no level2 or level3 headers synthesize a level3
+    // header to contain the (e.g. frame it, scroll container, etc.)
+    var headers = page.find('h2,h3');
+    if (headers.length === 0)
+      page.wrapInner('<div class="section level3"></div>');
+
+    // hoist up any content before level 2 or level 3 headers
+    var children = page.children();
+    children.each(function(index) {
+      if ($(this).hasClass('level2') || $(this).hasClass('level3'))
+        return false;
+      $(this).insertBefore(page);
+    });
+
+    // determine orientation and fillPage behavior for distinct media
+    var orientation, fillPage, storyboard;
+
+    // media: mobile phone
+    if (isMobilePhone()) {
+
+      // if there is a sidebar we need to ensure it's content
+      // is properly framed as an h3
+      var sidebar = page.find('.section.sidebar');
+      sidebar.removeClass('sidebar');
+      sidebar.wrapInner('<div class="section level3"></div>');
+      var h2 = sidebar.find('h2');
+      var h3 = $('<h3></h3>');
+      h3.append(h2.contents());
+      h3.insertBefore(h2);
+      h2.detach();
+
+      // wipeout h2 elements then enclose them in a single h2
+      var level2 = page.find('div.section.level2');
+      level2.each(function() {
+        level2.children('h2').remove();
+        level2.children().unwrap();
+      });
+      page.wrapInner('<div class="section level2"></div>');
+
+      // substitute mobile images
+      if (isPortrait()) {
+        var mobileFigures = $('img.mobile-figure');
+        mobileFigures.each(function() {
+          // get the src (might be base64 encoded)
+          var src = $(this).attr('src');
+
+          // find it's peer
+          var id = $(this).attr('data-mobile-figure-id');
+          var img = $('img[data-figure-id=' + id + "]");
+          img.attr('src', src)
+             .attr('width', _options.defaultFigWidthMobile)
+             .attr('height', _options.defaultFigHeightMobile);
+        });
+      }
+
+      // hoist storyboard commentary into it's own section
+      if (page.hasClass('storyboard')) {
+        var commentaryHR = page.find('div.section.level3 hr');
+        commentaryHR.each(function() {
+          var commentary = $(this).nextAll().detach();
+          var commentarySection = $('<div class="section level3"></div>');
+          commentarySection.append(commentary);
+          commentarySection.insertAfter($(this).closest('div.section.level3'));
+          $(this).remove();
+        });
+      }
+
+      // force a non full screen layout by columns
+      orientation = _options.orientation = 'columns';
+      fillPage = _options.fillPage = false;
+      storyboard = _options.storyboard = false;
+
+    // media: desktop
+    } else {
+
+      // determine orientation
+      orientation = page.attr('data-orientation');
+      if (orientation !== 'rows' && orientation != 'columns')
+        orientation = _options.orientation;
+
+      // determine storyboard mode
+      storyboard = page.hasClass('storyboard');
+
+      // fillPage based on options (force for storyboard)
+      fillPage = _options.fillPage || storyboard;
+
+      // handle sidebar
+      var sidebar = page.find('.section.level2.sidebar');
+      if (sidebar.length > 0)
+        layoutSidebar(sidebar, page);
+    }
+
+    // give it and it's parent divs height: 100% if we are in fillPage mode
+    if (fillPage) {
+      page.addClass('vertical-layout-fill');
+      page.css('height', '100%');
+      page.parents('div').css('height', '100%');
+    } else {
+      page.addClass('vertical-layout-scroll');
+    }
+
+    // perform the layout
+    if (storyboard)
+      layoutPageAsStoryboard(page);
+    else if (orientation === 'rows')
+      layoutPageByRows(page, fillPage);
+    else if (orientation === 'columns')
+      layoutPageByColumns(page, fillPage);
+  }
+
+  function layoutSidebar(sidebar, content) {
+
+    // get it out of the header hierarchy
+    sidebar = sidebar.first();
+    if (sidebar.hasClass('level1')) {
+      sidebar.removeClass('level1');
+      sidebar.children('h1').remove();
+    } else if (sidebar.hasClass('level2')) {
+      sidebar.removeClass('level2');
+      sidebar.children('h2').remove();
+    }
+
+    // determine width
+    var sidebarWidth = isTablet() ? 220 : 250;
+    var dataWidth = parseInt(sidebar.attr('data-width'));
+    if (dataWidth)
+      sidebarWidth = dataWidth;
+
+    // set the width and shift the page right to accomodate the sidebar
+    sidebar.css('width', sidebarWidth + 'px');
+    content.css('padding-left', sidebarWidth + 'px');
+
+    // wrap it's contents in a form
+    sidebar.wrapInner($('<form></form>'));
+  }
+
+  function layoutPageAsStoryboard(page) {
+
+    // create storyboard navigation
+    var nav = $('<div class="storyboard-nav"></div>');
+
+    // add navigation buttons
+    var prev = $('<button class="sbprev"><i class="fa fa-angle-left"></i></button>');
+    nav.append(prev);
+    var next= $('<button class="sbnext"><i class="fa fa-angle-right"></i></button>');
+    nav.append(next);
+
+    // add navigation frame
+    var frameList = $('<div class="sbframelist"></div>');
+    nav.append(frameList);
+    var ul = $('<ul></ul>');
+    frameList.append(ul);
+
+     // find all the level3 sections (those are the storyboard frames)
+    var frames = page.find('div.section.level3');
+    frames.each(function() {
+
+      // mark it
+      $(this).addClass('sbframe');
+
+      // divide it into chart content and (optional) commentary
+      $(this).addClass('dashboard-column-orientation');
+
+      // stuff the chart into it's own div w/ flex
+      $(this).wrapInner('<div class="sbframe-component"></div>');
+      setFlex($(this), 1);
+      var frame = $(this).children('.sbframe-component');
+
+      // extract the title from the h3
+      var li = $('<li></li>');
+      var h3 = frame.children('h3');
+      li.append(h3.contents());
+      h3.detach();
+      ul.append(li);
+
+      // extract commentary
+      var hr = frame.children('hr');
+      if (hr.length) {
+        var commentary = hr.nextAll().detach();
+        hr.remove();
+        var commentaryFrame = $('<div class="sbframe-commentary"></div>');
+        commentaryFrame.addClass('flowing-content-shim');
+        commentaryFrame.addClass('flowing-content-container');
+        commentaryFrame.append(commentary);
+        $(this).append(commentaryFrame);
+
+        // look for a data-commentary-width attribute
+        var commentaryWidth = $(this).attr('data-commentary-width');
+        if (commentaryWidth)
+          commentaryFrame.css('width', commentaryWidth + 'px');
+      }
+
+      // layout the chart (force flex)
+      var result = layoutChart(frame, true);
+
+      // ice the notes if there are none
+      if (!result.notes)
+        frame.find('.chart-notes').remove();
+
+      // set flex on chart
+      setFlex(frame, 1);
+    });
+
+    // create a div to hold all the frames
+    var frameContent = $('<div class="sbframe-content"></div>');
+    frameContent.addClass('dashboard-row-orientation');
+    frameContent.append(frames.detach());
+
+    // row orientation to stack nav and frame content
+    page.addClass('dashboard-row-orientation');
+    page.append(nav);
+    page.append(frameContent);
+    setFlex(frameContent, 1);
+
+    // initialize sly
+    var sly = new Sly(frameList, {
+    		horizontal: true,
+    		itemNav: 'basic',
+    		smart: true,
+    		activateOn: 'click',
+    		startAt: 0,
+    		scrollBy: 1,
+    		activatePageOn: 'click',
+    		speed: 200,
+    		moveBy: 600,
+    		dragHandle: true,
+    		dynamicHandle: true,
+    		clickBar: true,
+    		keyboardNavBy: 'items',
+    		next: next,
+    		prev: prev
+    	}).init();
+
+    // make first frame active
+    frames.removeClass('active');
+    frames.first().addClass('active');
+
+    // subscribe to frame changed events
+    sly.on('active', function (eventName, itemIndex) {
+      frames.removeClass('active');
+      frames.eq(itemIndex).addClass('active')
+                          .trigger('shown');
+    });
+  }
+
+  function layoutPageByRows(page, fillPage) {
+
+    // row orientation
+    page.addClass('dashboard-row-orientation');
+
+    // find all the level2 sections (those are the rows)
+    var rows = page.find('div.section.level2');
+
+    // if there are no level2 sections then treat the
+    // entire page as if it's a level 2 section
+    if (rows.length === 0) {
+      page.wrapInner('<div class="section level2"></div>');
+      rows = page.find('div.section.level2');
+    }
+
+    rows.each(function () {
+
+      // flags
+      var haveNotes = false;
+      var haveFlexHeight = true;
+
+      // remove the h2
+      $(this).children('h2').remove();
+
+      // check for a tabset
+      var isTabset = $(this).hasClass('tabset');
+      if (isTabset)
+        layoutTabset($(this));
+
+      // give it row layout semantics if it's not a tabset
+      if (!isTabset)
+        $(this).addClass('dashboard-row');
+
+      // find all of the level 3 subheads
+      var columns = $(this).find('div.section.level3');
+
+      // determine figureSizes sizes
+      var figureSizes = chartFigureSizes(columns);
+
+      // fixup the columns
+      columns.each(function(index) {
+
+        // layout the chart (force flex if we are in a tabset)
+        var result = layoutChart($(this), isTabset);
+
+        // update flexHeight state
+        if (!result.flex)
+          haveFlexHeight = false;
+
+        // update state
+        if (result.notes)
+          haveNotes = true;
+
+        // set the column flex based on the figure width
+        // (value boxes will just get the default figure width)
+        var chartWidth = figureSizes[index].width;
+        setFlex($(this), chartWidth + ' ' + chartWidth + ' 0px');
+
+      });
+
+      // remove empty chart note divs
+      if (isTabset)
+        $(this).find('.chart-notes').filter(function() {
+            return $(this).html() === "&nbsp;";
+        }).remove();
+      if (!haveNotes)
+        $(this).find('.chart-notes').remove();
+
+       // make it a flexbox row
+      if (haveFlexHeight)
+        $(this).addClass('dashboard-row-flex');
+
+      // now we can set the height on all the wrappers (based on maximum
+      // figure height + room for title and notes, or data-height on the
+      // container if specified). However, don't do this if there is
+      // no flex on any of the constituent columns
+      var flexHeight = null;
+      var dataHeight = parseInt($(this).attr('data-height'));
+      if (dataHeight)
+        flexHeight = adjustedHeight(dataHeight, columns.first());
+      else if (haveFlexHeight)
+        flexHeight = maxChartHeight(figureSizes, columns);
+      if (flexHeight) {
+        if (fillPage)
+          setFlex($(this), flexHeight + ' ' + flexHeight + ' 0px');
+        else {
+          $(this).css('height', flexHeight + 'px');
+          setFlex($(this), '0 0 ' + flexHeight + 'px');
+        }
+      }
+
+    });
+  }
+
+  function layoutPageByColumns(page, fillPage) {
+
+    // column orientation
+    page.addClass('dashboard-column-orientation');
+
+    // find all the level2 sections (those are the columns)
+    var columns = page.find('div.section.level2');
+
+    // if there are no level2 sections then treat the
+    // entire page as if it's a level 2 section
+    if (columns.length === 0) {
+      page.wrapInner('<div class="section level2"></div>');
+      columns = page.find('div.section.level2');
+    }
+
+    // layout each column
+    columns.each(function (index) {
+
+      // remove the h2
+      $(this).children('h2').remove();
+
+      // make it a flexbox column
+      $(this).addClass('dashboard-column');
+
+      // check for a tabset
+      var isTabset = $(this).hasClass('tabset');
+      if (isTabset)
+        layoutTabset($(this));
+
+      // find all the h3 elements
+      var rows = $(this).find('div.section.level3');
+
+      // get the figure sizes for the rows
+      var figureSizes = chartFigureSizes(rows);
+
+      // column flex is the max row width (or data-width if specified)
+      var flexWidth;
+      var dataWidth = parseInt($(this).attr('data-width'));
+      if (dataWidth)
+        flexWidth = dataWidth;
+      else
+        flexWidth = maxChartWidth(figureSizes);
+      setFlex($(this), flexWidth + ' ' + flexWidth + ' 0px');
+
+      // layout each chart
+      rows.each(function(index) {
+
+        // perform the layout
+        var result = layoutChart($(this), false);
+
+        // ice the notes if there are none
+        if (!result.notes)
+          $(this).find('.chart-notes').remove();
+
+        // set flex height based on figHeight, then adjust
+        if (result.flex) {
+          var chartHeight = figureSizes[index].height;
+          chartHeight = adjustedHeight(chartHeight, $(this));
+          if (fillPage)
+            setFlex($(this), chartHeight + ' ' + chartHeight + ' 0px');
+          else {
+            $(this).css('height', chartHeight + 'px');
+            setFlex($(this), chartHeight + ' ' + chartHeight + ' ' + chartHeight + 'px');
+          }
+        }
+      });
+    });
+  }
+
+  function chartFigureSizes(charts) {
+
+    // sizes
+    var figureSizes = new Array(charts.length);
+
+    // check each chart
+    charts.each(function(index) {
+
+      // start with default
+      figureSizes[index] = {
+        width: _options.defaultFigWidth,
+        height: _options.defaultFigHeight
+      };
+
+      // look for data-height or data-width then knit options
+      var dataWidth = parseInt($(this).attr('data-width'));
+      var dataHeight = parseInt($(this).attr('data-height'));
+      var knitrOptions = $(this).find('.knitr-options:first');
+      var knitrWidth, knitrHeight;
+      if (knitrOptions) {
+        knitrWidth = parseInt(knitrOptions.attr('data-fig-width'));
+        knitrHeight =  parseInt(knitrOptions.attr('data-fig-height'));
+      }
+
+      // width
+      if (dataWidth)
+        figureSizes[index].width = dataWidth;
+      else if (knitrWidth)
+        figureSizes[index].width = knitrWidth;
+
+      // height
+      if (dataHeight)
+        figureSizes[index].height = dataHeight;
+      else if (knitrHeight)
+        figureSizes[index].height = knitrHeight;
+    });
+
+    // return sizes
+    return figureSizes;
+  }
+
+  function maxChartHeight(figureSizes, charts) {
+
+    // first compute the maximum height
+    var maxHeight = _options.defaultFigHeight;
+    for (var i = 0; i<figureSizes.length; i++)
+      if (figureSizes[i].height > maxHeight)
+        maxHeight = figureSizes[i].height;
+
+    // now add offests for chart title and chart notes
+    if (charts.length)
+      maxHeight = adjustedHeight(maxHeight, charts.first());
+
+    return maxHeight;
+  }
+
+  function adjustedHeight(height, chart) {
+    if (chart.length > 0) {
+      var chartTitle = chart.find('.chart-title');
+      if (chartTitle.length)
+        height += chartTitle.first().outerHeight();
+      var chartNotes = chart.find('.chart-notes');
+      if (chartNotes.length)
+        height += chartNotes.first().outerHeight();
+    }
+    return height;
+  }
+
+  function maxChartWidth(figureSizes) {
+    var maxWidth = _options.defaultFigWidth;
+    for (var i = 0; i<figureSizes.length; i++)
+      if (figureSizes[i].width > maxWidth)
+        maxWidth = figureSizes[i].width;
+    return maxWidth;
+  }
+
+  // layout a chart
+  function layoutChart(chart, forceFlex) {
+
+    // state to return
+    var result = {
+      notes: false,
+      flex: false
+    };
+
+    // extract the title
+    var title = extractTitle(chart);
+
+    // find components that apply to this container
+    var components = componentsFind(chart);
+
+    // if it's a custom component then call it and return
+    var customComponents = componentsCustom(components);
+    if (customComponents.length) {
+      componentsLayout(customComponents, title, chart);
+      result.notes = false;
+      result.flex = forceFlex || componentsFlex(customComponents);
+      return result;
+    }
+
+    // put all the content in a chart wrapper div
+    chart.addClass('chart-wrapper');
+    chart.wrapInner('<div class="chart-stage"></div>');
+    var chartContent = chart.children('.chart-stage');
+
+    // flex the content if appropriate
+    result.flex = forceFlex || componentsFlex(components);
+    if (result.flex) {
+      // add flex classes
+      chart.addClass('chart-wrapper-flex');
+      chartContent.addClass('chart-stage-flex');
+
+      // additional shim to break out of flexbox sizing
+      chartContent.wrapInner('<div class="chart-shim"></div>');
+      chartContent = chartContent.children('.chart-shim');
+    }
+
+    // set custom data-padding attribute
+    var pad = chart.attr('data-padding');
+    if (pad) {
+      if (pad === "0")
+        chart.addClass('no-padding');
+      else {
+        pad = pad + 'px';
+        chartContent.css('left', pad)
+                    .css('top', pad)
+                    .css('right', pad)
+                    .css('bottom', pad)
+      }
+    }
+
+    // call compoents
+    componentsLayout(components, title, chartContent);
+
+    // also activate components on shiny output
+    findShinyOutput(chartContent).on('shiny:value',
+      function(event) {
+        var element = $(event.target);
+        setTimeout(function() {
+
+          // see if we opted out of flex based on our output (for shiny
+          // we can't tell what type of output we have until after the
+          // value is bound)
+          var components = componentsFind(element);
+          var flex = forceFlex || componentsFlex(components);
+          if (!flex) {
+            chart.css('height', "");
+            setFlex(chart, "");
+            chart.removeClass('chart-wrapper-flex');
+            chartContent.removeClass('chart-stage-flex');
+            chartContent.children().unwrap();
+          }
+
+          // perform layout
+          componentsLayout(components, title, element.parent());
+        }, 10);
+      });
+
+    // add the title
+    var chartTitle = $('<div class="chart-title"></div>');
+    chartTitle.append(title);
+    chart.prepend(chartTitle);
+
+    // add the notes section
+    var chartNotes = $('<div class="chart-notes"></div>');
+    chartNotes.html('&nbsp;');
+    chart.append(chartNotes);
+
+    // attempt to extract notes if we have a component
+    if (components.length)
+      result.notes = extractChartNotes(chartContent, chartNotes);
+
+    // return result
+    return result;
+  }
+
+  // build a tabset from a section div with the .tabset class
+  function layoutTabset(tabset) {
+
+    // check for fade option
+    var fade = tabset.hasClass("tabset-fade");
+    var pills = tabset.hasClass("tabset-pills");
+    var navClass = pills ? "nav-pills" : "nav-tabs";
+
+    // determine the heading level of the tabset and tabs
+    var match = tabset.attr('class').match(/level(\d) /);
+    if (match === null)
+      return;
+    var tabsetLevel = Number(match[1]);
+    var tabLevel = tabsetLevel + 1;
+
+    // find all subheadings immediately below
+    var tabs = tabset.find("div.section.level" + tabLevel);
+    if (!tabs.length)
+      return;
+
+    // create tablist and tab-content elements
+    var tabList = $('<ul class="nav ' + navClass + '" role="tablist"></ul>');
+    $(tabs[0]).before(tabList);
+    var tabContent = $('<div class="tab-content"></div>');
+    $(tabs[0]).before(tabContent);
+
+    // build the tabset
+    var activeTab = 0;
+    tabs.each(function(i) {
+
+      // get the tab div
+      var tab = $(tabs[i]);
+
+      // get the id then sanitize it for use with bootstrap tabs
+      var id = tab.attr('id');
+
+      // see if this is marked as the active tab
+      if (tab.hasClass('active'))
+        activeTab = i;
+
+      // sanitize the id for use with bootstrap tabs
+      id = id.replace(/[.\/?&!#<>]/g, '').replace(/\s/g, '_');
+      tab.attr('id', id);
+
+      // get the heading element within it and grab it's text
+      var heading = tab.find('h' + tabLevel + ':first');
+      var headingDom = heading.contents();
+
+      // build and append the tab list item
+      var a = $('<a role="tab" data-toggle="tab" class="nav-link"></a>');
+      a.append(headingDom);
+      a.attr('href', '#' + id);
+      a.attr('aria-controls', id);
+      var li = $('<li role="presentation" class="nav-item"></li>');
+      li.append(a);
+      tabList.append(li);
+
+      // set it's attributes
+      tab.attr('role', 'tabpanel');
+      tab.addClass('tab-pane');
+      tab.addClass('tabbed-pane');
+      tab.addClass('no-title');
+      if (fade)
+        tab.addClass('fade');
+
+      // move it into the tab content div
+      tab.detach().appendTo(tabContent);
+    });
+
+    // set active tab
+    $(tabList.children()[activeTab]).tab("show");
+    var active = $(tabContent.children('div.section')[activeTab]);
+    active.addClass('active');
+    if (fade)
+      active.addClass('in');
+
+    // add nav-tabs-custom
+    tabset.addClass('nav-tabs-custom');
+
+    // internal layout is dashboard-column with tab-content flexing
+    tabset.addClass('dashboard-column');
+    setFlex(tabContent, 1);
+  }
+
+  // one time global initialization for components
+  function componentsInit(dashboardContainer) {
+    for (var i=0; i<window.FlexDashboardComponents.length; i++) {
+      var component = window.FlexDashboardComponents[i];
+      if (component.init)
+        component.init(dashboardContainer);
+    }
+  }
+
+  // find components that apply within a container
+  function componentsFind(container) {
+
+    // look for components
+    var components = [];
+    for (var i=0; i<window.FlexDashboardComponents.length; i++) {
+      var component = window.FlexDashboardComponents[i];
+      if (component.find(container).length)
+        components.push(component);
+    }
+
+    // if there were none then use a special flowing content component
+    // that just adds a scrollbar in fillPage mode
+    if (components.length == 0) {
+      components.push({
+        find: function(container) {
+          return container;
+        },
+
+        flex: function(fillPage) {
+          return fillPage;
+        },
+
+        layout: function(title, container, element, fillPage) {
+          if (fillPage) {
+            container.addClass('flowing-content-shim');
+            container.addClass('flowing-content-container');
+          }
+        }
+      });
+    }
+
+    return components;
+  }
+
+  // if there is a custom component then pick it out
+  function componentsCustom(components) {
+    var customComponent = [];
+    for (var i=0; i<components.length; i++)
+      if (components[i].type === "custom") {
+        customComponent.push(components[i]);
+        break;
+      }
+    return customComponent;
+  }
+
+  // query all components for flex
+  function componentsFlex(components) {
+
+    // no components at all means no flex
+    if (components.length === 0)
+      return false;
+
+    // otherwise query components (assume true unless we see false)
+    var isMobile = isMobilePhone();
+    for (var i=0; i<components.length; i++)
+      if (components[i].flex && !components[i].flex(_options.fillPage))
+        return false;
+    return true;
+  }
+
+  // layout all components
+  function componentsLayout(components, title, container) {
+    var isMobile = isMobilePhone();
+    for (var i=0; i<components.length; i++) {
+      var element = components[i].find(container);
+      if (components[i].layout) {
+        // call layout (don't call other components if it returns false)
+        var result = components[i].layout(title, container, element, _options.fillPage);
+        if (result === false)
+          return;
+      }
+    }
+  }
+
+  // get a reference to the h3, discover it's inner html, and remove it
+  function extractTitle(container) {
+    var h3 = container.children('h3').first();
+    var title = '';
+    if (!container.hasClass('no-title'))
+      title = h3.contents();
+    h3.detach();
+    return title;
+  }
+
+  // extract chart notes
+  function extractChartNotes(chartContent, chartNotes) {
+    // look for a terminating blockquote or image caption
+    var blockquote = chartContent.children('blockquote:last-child');
+    var caption = chartContent.children('div.image-container')
+                              .children('p.caption');
+    if (blockquote.length) {
+      chartNotes.empty().append(blockquote.children('p:first-child').contents());
+      blockquote.remove();
+      return true;
+    } else if (caption.length) {
+      chartNotes.empty().append(caption.contents());
+      caption.remove();
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  function findShinyOutput(chartContent) {
+    return chartContent.find('.shiny-text-output, .shiny-html-output');
+  }
+
+  // safely detect rendering on a mobile phone
+  function isMobilePhone() {
+    try
+    {
+      return ! window.matchMedia("only screen and (min-width: 768px)").matches;
+    }
+    catch(e) {
+      return false;
+    }
+  }
+
+  function isFillPage() {
+    return _options.fillPage;
+  }
+
+  // detect portrait mode
+  function isPortrait() {
+    return ($(window).width() < $(window).height());
+  }
+
+  // safely detect rendering on a tablet
+  function isTablet() {
+    try
+    {
+      return window.matchMedia("only screen and (min-width: 769px) and (max-width: 992px)").matches;
+    }
+    catch(e) {
+      return false;
+    }
+  }
+
+  // test whether this is a shiny doc
+  function isShinyDoc() {
+    return (typeof(window.Shiny) !== "undefined" && !!window.Shiny.outputBindings);
+  }
+
+  // set flex using vendor specific prefixes
+  function setFlex(el, flex) {
+    el.css('-webkit-box-flex', flex)
+      .css('-webkit-flex', flex)
+      .css('-ms-flex', flex)
+      .css('flex', flex);
+  }
+
+  // support bookmarking of pages
+  function handleLocationHash() {
+
+    // restore tab/page from bookmark
+    var hash = window.decodeURIComponent(window.location.hash);
+    if (hash.length > 0)
+      $('ul.nav a[href="' + hash + '"]').tab('show');
+    FlexDashboardUtils.manageActiveNavbarMenu();
+
+    // navigate to a tab when the history changes
+    window.addEventListener("popstate", function(e) {
+      var hash = window.decodeURIComponent(window.location.hash);
+      var activeTab = $('ul.nav a[href="' + hash + '"]');
+      if (activeTab.length) {
+        activeTab.tab('show');
+      } else {
+        $('ul.nav a:first').tab('show');
+      }
+      FlexDashboardUtils.manageActiveNavbarMenu();
+    });
+
+    // add a hash to the URL when the user clicks on a tab/page
+    $('.navbar-nav a[data-toggle="tab"]').on('click', function(e) {
+      var baseUrl = FlexDashboardUtils.urlWithoutHash(window.location.href);
+      var hash = FlexDashboardUtils.urlHash($(this).attr('href'));
+      var href = baseUrl + hash;
+      FlexDashboardUtils.setLocation(href);
+    });
+
+    // handle clicks of other links that should activate pages
+    var navPages = $('ul.navbar-nav li a[data-toggle=tab]');
+    navPages.each(function() {
+      var href =  $(this).attr('href');
+      var links = $('a[href="' + href + '"][data-toggle!=tab]');
+      links.each(function() {
+        $(this).on('click', function(e) {
+          window.FlexDashboardUtils.showPage(href);
+        });
+      });
+    });
+  }
+
+  // tweak Prism highlighting
+  function initPrismHighlighting() {
+
+    if (window.Prism) {
+      Prism.languages.insertBefore('r', 'comment', {
+        'heading': [
+          {
+            // title 1
+        	  // =======
+
+        	  // title 2
+        	  // -------
+        	  pattern: /\w+.*(?:\r?\n|\r)(?:====+|----+)/,
+            alias: 'operator'
+          },
+          {
+            // ### title 3
+            pattern: /(^\s*)###[^#].+/m,
+            lookbehind: true,
+            alias: 'operator'
+          }
+        ]
+      });
+
+      // prism highlight
+      Prism.highlightAll();
+    }
+  }
+
+  FlexDashboard.prototype = {
+    constructor: FlexDashboard,
+    init: init,
+    isMobilePhone: isMobilePhone,
+    isFillPage: isFillPage
+  };
+
+  return FlexDashboard;
+
+})();
+
+// utils
+window.FlexDashboardUtils = {
+  resizableImage: function(img) {
+    var src = img.attr('src');
+    var url = 'url("' + src + '")';
+    img.parent().css('background', url)
+                .css('background-size', 'contain')
+                .css('background-repeat', 'no-repeat')
+                .css('background-position', 'center')
+                .addClass('image-container');
+  },
+  setLocation: function(href) {
+    if (history && history.pushState) {
+      history.pushState(null, null, href);
+    } else {
+      window.location.replace(href);
+    }
+    setTimeout(function() {
+        window.scrollTo(0, 0);
+    }, 10);
+    this.manageActiveNavbarMenu();
+  },
+  showPage: function(href) {
+    $('ul.navbar-nav li a[href="' + href + '"]').tab('show');
+    var baseUrl = this.urlWithoutHash(window.location.href);
+    var loc = baseUrl + href;
+    this.setLocation(loc);
+  },
+  showLinkedValue: function(href) {
+    // check for a page link
+    if ($('ul.navbar-nav li a[data-toggle=tab][href="' + href + '"]').length > 0)
+      this.showPage(href);
+    else
+      window.open(href);
+  },
+  urlWithoutHash: function(url) {
+    var hashLoc = url.indexOf('#');
+    if (hashLoc != -1)
+      return url.substring(0, hashLoc);
+    else
+      return url;
+  },
+  urlHash: function(url) {
+    var hashLoc = url.indexOf('#');
+    if (hashLoc != -1)
+      return url.substring(hashLoc);
+    else
+      return "";
+  },
+  manageActiveNavbarMenu: function () {
+    // remove active from currently active tabs
+    $('.navbar ul.nav .active').removeClass('active');
+    // find the active tab
+    var activeTab = $('.dashboard-page-wrapper.tab-pane.active');
+    if (activeTab.length > 0) {
+      var tabId = activeTab.attr('id');
+      if (tabId)
+        $(".navbar ul.nav a[href='#" + tabId + "']").tab("show");
+    }
+  }
+};
+
+window.FlexDashboard = new FlexDashboard();
+
+// empty content
+window.FlexDashboardComponents.push({
+  find: function(container) {
+    if (container.find('p').length == 0)
+      return container;
+    else
+      return $();
+  }
+})
+
+// plot image
+window.FlexDashboardComponents.push({
+
+  find: function(container) {
+    return container.children('p')
+                    .children('img:only-child');
+  },
+
+  layout: function(title, container, element, fillPage) {
+    FlexDashboardUtils.resizableImage(element);
+  }
+});
+
+// plot image (figure style)
+window.FlexDashboardComponents.push({
+
+  find: function(container) {
+    return container.children('div.figure').children('img');
+  },
+
+  layout: function(title, container, element, fillPage) {
+    FlexDashboardUtils.resizableImage(element);
+  }
+});
+
+// htmlwidget
+window.FlexDashboardComponents.push({
+
+  init: function(dashboardContainer) {
+    // trigger "shown" after initial layout to force static htmlwidgets
+    // in runtime: shiny to be resized after the dom has been transformed
+    dashboardContainer.on('flexdashboard:layoutcomplete', function(event) {
+      setTimeout(function() {
+        dashboardContainer.trigger('shown');
+      }, 200);
+    });
+  },
+
+  find: function(container) {
+    return container.children('div[id^="htmlwidget-"],div.html-widget');
+  }
+});
+
+// gauge
+window.FlexDashboardComponents.push({
+
+  find: function(container) {
+    return container.children('div.html-widget.gauge');
+  },
+
+  flex: function(fillPage) {
+    return false;
+  },
+
+  layout: function(title, container, element, fillPage) {
+
+
+  }
+
+});
+
+// shiny output
+window.FlexDashboardComponents.push({
+  find: function(container) {
+    return container.children('div[class^="shiny-"]');
+  }
+});
+
+// bootstrap table
+window.FlexDashboardComponents.push({
+
+  find: function(container) {
+    var bsTable = container.find('table.table');
+    if (bsTable.length !== 0)
+      return bsTable;
+    else
+      return container.find('tr.header').parent('thead').parent('table');
+  },
+
+  flex: function(fillPage) {
+    return fillPage;
+  },
+
+  layout: function(title, container, element, fillPage) {
+
+    // alias variables
+    var bsTable = element;
+
+    // fixup xtable generated tables with a proper thead
+    var headerRow = bsTable.find('tbody > tr:first-child > th').parent();
+    if (headerRow.length > 0) {
+      var thead = $('<thead></thead>');
+      bsTable.prepend(thead);
+      headerRow.detach().appendTo(thead);
+    }
+
+    // improve appearance
+    container.addClass('bootstrap-table');
+
+    // for fill page provide scrolling w/ sticky headers
+    if (fillPage) {
+      // force scrollbar on overflow
+      container.addClass('flowing-content-shim');
+
+      // stable table headers when scrolling
+      bsTable.stickyTableHeaders({
+        scrollableArea: container
+      });
+    }
+  }
+});
+
+// embedded shiny app
+window.FlexDashboardComponents.push({
+
+  find: function(container) {
+    return container.find('iframe.shiny-frame');
+  },
+
+  flex: function(fillPage) {
+    return fillPage;
+  },
+
+  layout: function(title, container, element, fillPage) {
+    if (fillPage) {
+      element.attr('height', '100%');
+    } else {
+      // provide default height if necessary
+      var height = element.get(0).style.height;
+      if (!height)
+        height = element.attr('height');
+      if (!height)
+        element.attr('height', 500);
+    }
+  }
+});
+
+// shiny fillRow or fillCol
+window.FlexDashboardComponents.push({
+
+  find: function(container) {
+    return container.find('.flexfill-container');
+  },
+
+  flex: function(fillPage) {
+    return fillPage;
+  },
+
+  layout: function(title, container, element, fillPage) {
+    if (fillPage)
+      element.css('height', '100%');
+    else {
+      // provide default height if necessary
+      var height = element.get(0).style.height;
+      if (height === "100%" || height === "auto" || height === "initial" ||
+          height === "inherit" || !height) {
+        element.css('height', 500);
+      }
+    }
+  }
+});
+
+// valueBox
+window.FlexDashboardComponents.push({
+
+  type: "custom",
+
+  find: function(container) {
+    if (container.find('span.value-output, .shiny-valuebox-output').length)
+      return container;
+    else
+      return $();
+  },
+
+  flex: function(fillPage) {
+    return false;
+  },
+
+  layout: function(title, container, element, fillPage) {
+
+    // alias variables
+    var chartTitle = title;
+    var valueBox = element;
+
+    // add value-box class to container
+    container.addClass('value-box');
+
+    // value paragraph
+    var value = $('<p class="value"></p>');
+
+    // if we have shiny-text-output then just move it in
+    var valueOutputSpan = [];
+    var shinyOutput = valueBox.find('.shiny-valuebox-output').detach();
+    if (shinyOutput.length) {
+      valueBox.children().remove();
+      shinyOutput.html("&mdash;");
+      value.append(shinyOutput);
+    } else {
+      // extract the value (remove leading vector index)
+      var chartValue = valueBox.text().trim();
+      chartValue = chartValue.replace("[1] ", "");
+      valueOutputSpan = valueBox.find('span.value-output').detach();
+      valueBox.children().remove();
+      value.text(chartValue);
+    }
+
+    // caption
+    var caption = $('<p class="caption"></p>');
+    caption.append(chartTitle);
+
+    // build inner div for value box and add it
+    var inner = $('<div class="inner"></div>');
+    inner.append(value);
+    inner.append(caption);
+    valueBox.append(inner);
+
+    // add icon if specified
+    var icon = $('<div class="icon"><i></i></div>');
+    valueBox.append(icon);
+    function setIcon(chartIcon) {
+      var iconLib = "";
+      var iconSplit = chartIcon.split(" ");
+      if (iconSplit.length > 1) {
+        iconLib = iconSplit[0];
+        chartIcon = iconSplit.slice(1).join(" ");
+      } else {
+        var components = chartIcon.split("-");
+        if (components.length > 1)
+          iconLib = components[0];
+      }
+      icon.children('i').attr('class', iconLib + ' ' + chartIcon);
+    }
+    var chartIcon = valueBox.attr('data-icon');
+    if (chartIcon)
+      setIcon(chartIcon);
+
+    // handle data attributes in valueOutputSpan
+    function handleValueOutput(valueOutput) {
+
+      // caption
+      var dataCaption = valueOutput.attr('data-caption');
+      if (dataCaption)
+        caption.html(dataCaption);
+
+      // icon
+      var dataIcon = valueOutput.attr('data-icon');
+      if (dataIcon)
+        setIcon(dataIcon);
+
+      // If valueBox(color=) was an accent color, this attr should
+      // be populated with the accent color and the relevant CSS comes
+      // in through HTML dependencies
+      var dataColorAccent = valueOutput.attr('data-color-accent');
+      var valueBoxClasses = "value-box-" + (["primary", "info", "danger", "warning", "success"].join(" value-box-"));
+      if (dataColorAccent) {
+        valueBox.removeClass(valueBoxClasses);
+        valueBox.addClass('value-box-' + dataColorAccent);
+      }
+
+      // If valueBox(color=) was a CSS color, these other data-color-*
+      // attrs will be populated
+      var dataColor = valueOutput.attr('data-color');
+      if (dataColor) {
+        valueBox.removeClass(valueBoxClasses);
+        valueBox.css('background-color', dataColor);
+      }
+      var dataColorText = valueOutput.attr('data-color-text');
+      if (dataColorText) {
+        valueBox.find(".inner").css('color', dataColorText);
+      }
+      var dataColorIcon = valueOutput.attr('data-color-icon');
+      if (dataColorIcon) {
+        valueBox.find(".icon").css('color', dataColorIcon);
+      }
+
+      // url
+      var dataHref = valueOutput.attr('data-href');
+      if (dataHref) {
+        valueBox.addClass('linked-value');
+        valueBox.off('click.value-box');
+        valueBox.on('click.value-box', function(e) {
+          window.FlexDashboardUtils.showLinkedValue(dataHref);
+        });
+      }
+    }
+
+    // check for a valueOutputSpan
+    if (valueOutputSpan.length > 0) {
+      handleValueOutput(valueOutputSpan);
+    }
+
+    // if we have a shinyOutput then bind a listener to handle
+    // new valueOutputSpan values
+    shinyOutput.on('shiny:value',
+      function(event) {
+        var element = $(event.target);
+        setTimeout(function() {
+          var valueOutputSpan = element.find('span.value-output');
+          if (valueOutputSpan.length > 0)
+            handleValueOutput(valueOutputSpan);
+        }, 10);
+      }
+    );
+  }
+});
+</script>
+
+<div id="dashboard-container">
+
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div id="summary" class="section level1">
+<h1>Summary</h1>
+<div id="row1" class="section level2">
+<h2>Row1</h2>
+<div id="site-1" class="section level3">
+<h3>Site 1</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<span class="value-output" data-caption="PHS" data-icon="fa-hospital-symbol" data-color="#B2B2B2" data-color-text="#1a1a1a" data-color-icon="#d9d9d9">0</span>
+</div>
+<div id="site-2" class="section level3">
+<h3>Site 2</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<span class="value-output" data-caption="Glasgow" data-icon="fa-hospital-symbol" data-color="#B2B2B2" data-color-text="#1a1a1a" data-color-icon="#d9d9d9">0</span>
+</div>
+<div id="site-3" class="section level3">
+<h3>Site 3</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<span class="value-output" data-caption="Edinburgh" data-icon="fa-hospital-symbol" data-color="#B2B2B2" data-color-text="#1a1a1a" data-color-icon="#d9d9d9">296</span>
+</div>
+</div>
+<div id="row2" class="section level2">
+<h2>Row2</h2>
+<div id="type-1" class="section level3">
+<h3>type 1</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<span class="value-output" data-caption="Breast (early)" data-icon="fa-file-medical" data-color="#F5A5DC" data-color-text="#1a1a1a" data-color-icon="#fad2ee">76</span>
+</div>
+<div id="type-2" class="section level3">
+<h3>type 2</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<span class="value-output" data-caption="Ovarian" data-icon="fa-file-medical" data-color="#F5A5DC" data-color-text="#1a1a1a" data-color-icon="#fad2ee">15</span>
+</div>
+<div id="type-3" class="section level3">
+<h3>type 3</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<span class="value-output" data-caption="Lung (Stage 3)" data-icon="fa-file-medical" data-color="#F5A5DC" data-color-text="#1a1a1a" data-color-icon="#fad2ee">27</span>
+</div>
+<div id="type-4" class="section level3">
+<h3>type 4</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<span class="value-output" data-caption="Colorectal" data-icon="fa-file-medical" data-color="#F5A5DC" data-color-text="#1a1a1a" data-color-icon="#fad2ee">0</span>
+</div>
+<div id="type-5" class="section level3">
+<h3>type 5</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<span class="value-output" data-caption="Liver/HPB" data-icon="fa-file-medical" data-color="#F5A5DC" data-color-text="#1a1a1a" data-color-icon="#fad2ee">178</span>
+</div>
+<div id="type-6" class="section level3">
+<h3>type 6</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<span class="value-output" data-caption="CNS" data-icon="fa-file-medical" data-color="#F5A5DC" data-color-text="#1a1a1a" data-color-icon="#fad2ee">0</span>
+</div>
+<div id="type-7" class="section level3">
+<h3>type 7</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<span class="value-output" data-caption="Pancreatic" data-icon="fa-file-medical" data-color="#F5A5DC" data-color-text="#1a1a1a" data-color-icon="#fad2ee">0</span>
+</div>
+<div id="type-8" class="section level3">
+<h3>type 8</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<span class="value-output" data-caption="Prostate" data-icon="fa-file-medical" data-color="#F5A5DC" data-color-text="#1a1a1a" data-color-icon="#fad2ee">0</span>
+</div>
+</div>
+<div id="row3" class="section level2">
+<h2>Row3</h2>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div id="htmlwidget-5f27014867a105430a4f" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-5f27014867a105430a4f">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Data Item":["Age at diagnosis","ECOG/Performance status","Incidence date","ICD-10 Code (4 char)","ICDO3 Morphology code","FIGO Staging","Tumour Grade","SurgeryDate","DateStarted","DateEnded","Regime Name","Time from Diagnosis to Death","Date of local recurrence","Date of distant recurrence","Death","CHI","Incidence date","ICD10 code (4 char)","ICDO3 Morphology code","Mode of Presentation","Menopausal Status","Laterality","Clinical T Stage","Clinical N Stage","Pathological T Stage","Pathological N Stage","Inflammatory Breast Cancer","AJCC Staging","Oestrogen Receptor Status","Oestrogen score","Progesterone Receptor Status","Tumour Size","Tumour Grade","Oncotype DX","Oncotype DX score","Oncotype DX Date","Genetic BRCA","Genetic BRCA Date","OPCS4 code?","Date Primary Surgery","Mastectomy","Wide Local Excision","Axillary Node Clearance","Sentinel Lymph Node Biopsy","Date Mastectomy","Date Wide Local Excision","Date Axillary Node Clearance","Date Sentinel Lymph Node Biopsy","Date First Chemotherapy (all)","Date first Neoadjuvant Chemotherapy (all)","Received Neoadjuvant Chemotherapy (all)","Neoadjuvant Taxane-based Chemotherapy","Neoadjuvant Anthracycline-based Chemotherapy","Neoadjuvant Other Chemotherapy","Date first Neoadjuvant Taxane-based Chemotherapy","Date first Neoadjuvant Anthracycline-based Chemotherapy","Date first Neoadjuvant Other Chemotherapy","Date first Adjuvant Chemotherapy (all)","Received Adjuvant Chemotherapy","Adjuvant Anthracycline-based Chemotherapy","Adjuvant Taxane-based Chemotherapy","Adjuvant Other Chemotherapy","Date first Adjuvant Anthracycline-based Chemotherapy","Date first Adjuvant Taxane-based Chemotherapy","Date first Adjuvant Other Chemotherapy","Date Start of first adjuvant Endocrine Therapy (all)","Received Adjuvant Endocrine Therapy (all)","Date first Adjuvant Tamoxifen","Date first Adjuvant Letrozole","Date first Adjuvant Anastrozole","Date first Adjuvant Exemestane","Date first Adjuvant Goserelin","Adjuvant Tamoxifen","Adjuvant Letrozole","Adjuvant Anastrozole","Adjuvant Exemestane","Adjuvant Goserelin","Date start Radiotherapy","Date end Radiotherapy","Received Radiotherapy","Death","Date Death","Invasive Disease-free Event","Date Invasive Disease-free Event event","Recurrence (any)","First date recurrence (any)","Local Recurrence","Date Local Recurrence","Distant Recurrence","Date Distant Recurrence","Date to last Follow-up","CHI","DOB","Gender","Postcode at Diagnosis","ECOG/Performance status_SMR","ECOG/Performance status_Chemo","Date of Diagnosis","Clinical T Stage","Clinical N Stage","Clinical M Stage","Pathological T Stage","Pathological N Stage","Pathological M Stage","ICD-10 Code (4 dig)","ICD-10 O3 code","ICD-10 O3 descr","Received surgery","Date first surgical tx","Date first radical surgery","Received Radiotherapy","Date first radiotherapy","Received SACT","Date first SACT","Received immunotherapy","Date first immunotherapy","Death","Time from Diagnosis to last Follow-up","Virtual cohort ID","Community Health Identifier","Age at diagnosis","Year of Diagnosis","Location admitted / seen from","Sex at birth","Ethnicity","Postcode at Diagnosis","SIMD quintile at diagnosis","Residential Area at diagnosis (Urban/Rural)","Patient in Clinical Trial","Frailty Index","ECOG/Performance status_SMR","ECOG/Performance status","Height","Weight","Surface Area","Date of Diagnosis","Location of diagnosis","Anatomical location of diagnosis","Most valid basis of diagnosis","Site of origin of primary tumour","Core tissue biopsy","Cytology/brushings","Clinical T Stage","Clinical N Stage","Clinical M Stage","Pathological T Stage","Pathological N Stage","Pathological M Stage","ICD-10 Code (4 dig)","ICD-10 O3 code","ICD-10 O3 descr","Morphology/differentiation (morphology ICO3 code and description and topography)","Nodes examined","Vascular invasion on imaging","Vascular invasion on pathology","Date Staging Investigations complete","Number of Lesions on imaging","Size of largest lesion on imaging","Presence of chronic liver disease","Cause of chronic liver disease 1","First date of chronic liver disease 1 diagnosis","Cause of chronic liver disease 2","First date of chronic liver disease 2 diagnosis","Cause of chronic liver disease 3","First date of chronic liver disease 3 diagnosis","Treatment for PBC/PSC","HIV Status (pre-diagnosis)","Hepatitis B (pre-diagnosis)","Hepatitis C (pre-diagnosis)","Received HCV treatment","HCV Sustained Virological Response (SVR)","Date SVR","UK Listing criteria","Referred for Liver Transplant","Listed for transplant","Died on waiting list","Why not listed for transplant","AFP on diagnosis","CA19-9 on diagnosis","HCG at diagnosis","CEA on diagnosis","Ascites (Child-Pugh/BCLC)","Encephalopathy (Child-Pugh/BCLC)","Bilirubin at diagnosis (Child-Pugh/BCLC)","Albumin at diagnosis (Child-Pugh/BCLC)","INR at diagnosis (Child-Pugh/BCLC)","InvestigationDate","InvestigationType","InvestigationTypeID","InvestigationResult","InvestigationResponse","Name","Value","Location Code (Ablation)","Ablation Treatment Given","Date of Ablation","Location Code (TACE)","Date of first Transarterial Chemoembolisation Treatment","Date of last Transarterial Chemoembolisation Treatment","TACE type","Location Code (SIRT)","Date of first selective internal radiotherapy treatment","Date of last selective internal radiotherapy treatment","ERCP performed","Date of ERCP","Stent","Biliary drainage","Date of Biliary drainage","Portal vein embolisation / ligation","SurgeryDate","Episode","ResidualDisease","Procedure","SurgeryType","Arterial resection","Venous resection","NCCN Resectability","ExcisionMargin","Site","OPSC4 code","Intent","Emergency","Date Seen by Oncologist","Location code (SACT)","DateStarted","DateEnded","RegCode","Regime Name","Modified","Delayed","TotalCycles","WhyOffStudy","Intent","Received Radiotherapy","DateStarted","DateEnded","Site","Dose","Method","Energy","Fractions","ResponseId","TreatmentType","TreatmentDate","TreatmentType","TreatmentDate","Recurrence (any)","Death","Date of death","Primary Cause of Death","Secondary Causes of Death","Invasive Disease-free Event","Date of local recurrence","Date of distant recurrence","Local Recurrence","Distant Recurrence","FU date","TACE for recurrent disease","Ablation for recurrent disease","SACT for recurrent disease","Transplantation for recurrent disease","Date of Data Extraction","Post-diagnosis liver failure","Post-diagnosis biliary sepsis","Post-diagnosis haemorrhage","Charlson Comorbidity Index","Number of Inpatient Visits after Diagnosis","Number of Outpatient Visits after Diagnosis","Average Length of Stay for Inpatient Visits","Total Length of Stay","Total Length of Stay","Total Length of Stay","Total Length of Stay","Total Length of Stay","Total Length of Stay","Total Length of Stay","Total Length of Stay","Total Length of Stay","Total Length of Stay","Total Length of Stay","Total Length of Stay","Total Length of Stay","Procedure ID","Date of procedure","Procedure OPCS 1","Procedure OPCS 2","Procedure OPCS 3","Procedure ICD10","TreatmentMorbidityId","DemographicId","DiagnosisId","Primary","Episode","MorbidityDate","MorbidityType","MorbiditySite"],"Data Field":["diag_age","perform","diag_date","ICD10","ICDO3","figo_stage","grade","surg_date","sact_start","sact_end","sact_regname","t_os",null,null,"death","CHI","diag_date",null,null,"screening","m_status","side","cT","cN","pT","pN","inflam","ajcc_stage","er_status","er_score","pr_status","size","grade","otdx","otdx_score","otdx_date","brca","brca_date",null,"t_diag_surg","mastectomy","wle","anc","slnb","date_mastectomy","date_wle","date_anc","date_slnb","t_diag_ct","date_nact","nact","n_anthra_CT","n_taxa_CT","n_other_CT","date_n_anthra_CT","date_n_taxa_CT","date_n_other_CT","date_act","act","anthra_CT","taxa_CT","other_CT","date_anthra_CT","date_taxa_CT","date_other_CT","date_t_et_idfs","t_et_idfs","date_tamoxifen","date_letrozole","date_anastrozole","date_exemestane","date_goserelin","tamoxifen","letrozole","anastrozole","exemestane","goserelin","t_diag_rad","t_diag_rad","radio","death","date_t_os","idfs_e","date_t_idfs","recur","date_recur","local_recur","date_local_recur","dist_recur","date_dist_recur","t_fu"," ","dob","sex","post_code","perform_SMR","perform_chemo","diag_date","cT","cN","cM","pT","pN","pM","ICD10","ICD10_O3_code","ICD10_O3_desc","surg","surg_date","surg_date_rad","radio","radio_date","sact","sact_date","immuno","immuno_date","death","t_fu","vcID","CHI","diag_age","diag_year",null,"sex","Ethnicity","post_code","simd_q","res_area","c_trial","frailty","perform_SMR","perform","height","weight","s_area","diag_date",null,null,null,null,null,null,"cT","cN","cM","pT","pN","pM","ICD10","ICD10_O3_code","ICD10_O3_desc",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"inv_date","inv_type","inv_type_id","inv_res","inv_resp","biom_name","biom_value",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"surg_date","Episode","surg_res","surg_proc","surg_type",null,null,null,"ExcisionMargin","site","surg_opcs","surg_int","surg_emerg",null,null,"sact_start","sact_end","sact_regcode","sact_regname","sact_dosemod","sact_dosedel","sact_totcycle","sact_stoptx","sact_intent","radio","radio_start","radio_end","radio_site","radio_dose","radio_method","radio_energy","radio_fract","oc_assoresp","oc_txtype","oc_txdate",null,null,"recur","death",null,"prm_d","srm_d","idfs_e",null,null,"local_recur","dist_recur","lastseen",null,null,null,null,"dta_ex_date",null,null,null,"cci","n_inp","n_outp","a_los","t_los","t_los","t_los","t_los","t_los","t_los","t_los","t_los","t_los","t_los","t_los","t_los","t_los",null,null,null,null,null,null,null,null,null,null,null,null,null,null],"Data Format":["integer","integer","date","character","character","character","integer","date","date","date","character","integer","date","date","logical","character","date","character","character","logical","logical","character","integer","integer","integer","integer","logical","character","logical","integer","logical","numeric","integer","logical","integer","date",null,"date",null,"integer","logical","logical","logical","logical","date","date","date","date","integer","date","logical","logical","logical","logical","date","date","date","date","logical","logical","logical","logical","date","date","date","date","logical","date","date","date","date","date","logical","logical","logical","logical","logical","integer","integer","logical","logical","date","logical","date","logical","date","logical","date","logical","date","integer","character","integer","character","character","integer","integer","date","integer","integer","integer","integer","integer","integer","numeric","integer","character","logical","date","date","logical","date","logical","date","logical","date","logical","integer","integer","integer","integer","integer","character","character","character","character","integer","character","logical","numeric","integer","integer","numeric","numeric","numeric","date","character","character","character","character","logical","logical","integer","integer","integer","integer","integer","integer","numeric","integer","character","character","integer","character","character","date","integer","integer","logical","character","date","character","date","character","date","character","character","character","character","character","character","date","character","logical","logical","logical","character","integer","integer","integer","integer","character","character","integer","integer","integer","date","character","integer","character","character","character","character","character","character","date","character","date","date","character","character","date","date","character","date","character","character","date","character","date","integer","character","character","character","character","character","character","character","character","integer","character","character","date","character","date","date","character","character","character","character","integer","character","character","logical","date","date","character","integer","character","character","integer","integer","character","date","character","date","logical","logical","date","character","character","logical","date","date","logical","logical","date","logical","logical","logical","logical","date","logical","logical","logical","integer","integer","integer","numeric","numeric","numeric","numeric","numeric","numeric","numeric","numeric","numeric","numeric","numeric","numeric","numeric","numeric","character","date","character","character","character","character","integer","integer","integer","integer","integer","date","character","character"],"Data Source Primary":["derived from diag_date and DofB","OCDB","OCDB","SMR06","QPI","OCDB","OCDB","OCDB","OCDB","OCDB","OCDB","SMR06","OCDB","OCDB","SMR06",null,"QPI","SMR06","SMR06","QPI","QPI","QPI","QPI","QPI","SMR06","SMR06","QPI","QPI","QPI","QPI","QPI","QPI","QPI","QPI","QPI","QPI","Clinical genetics DB","Clinical genetics DB","SESCD","QPI","QPI","QPI","QPI","QPI","QPI","QPI","QPI","QPI","QPI","Chemocare","Chemocare","Chemocare","Chemocare","Chemocare","Chemocare","Chemocare","Chemocare","Chemocare","Chemocare","Chemocare","Chemocare","Chemocare","Chemocare","Chemocare","Chemocare","QPI","Chemocare","PIS","PIS","PIS","PIS","PIS","PIS","PIS","PIS","PIS","PIS","QPI","Aria","QPI","NRS","SMR06","QPI","QPI","QPI","QPI","QPI","QPI","QPI","QPI","SMR06","SMR06","SMR06","SMR06","SMR06","SMR06","Chemocare","QPI","QPI","QPI","QPI","QPI","QPI","QPI","QPI","QPI","QPI","SMR06","SMR06","SMR06","SMR06","SMR06","Chemocare","Chemocare","Chemocare","Chemocare","NRS","NRS","OCDB","SMR06","derived from diag_date and DofB","derived from diag_date and DofB","SMR00","NRS","OCDB","SMR06","SMR06","OCDB","QPI","GP Records","SMR06","OCDB","Chemocare","Chemocare","Chemocare","QPI","QPI","TRAK","QPI","QPI","TRAK","TRAK","QPI","QPI","QPI","QPI","QPI","QPI","QPI","QPI","QPI","QPI","QPI","QPI","QPI","QPI","QPI","QPI","QPI","QPI","QPI","QPI","QPI","QPI","QPI","SMR01","SMR01","SMR01","SMR01","SMR01","SMR01","SMR01","QPI","QPI","SLTU Database","NRS","SLTU Database","OCDB","OCDB","OCDB","OCDB","OCDB","OCDB","OCDB","OCDB","OCDB","OCDB","OCDB","OCDB","OCDB","OCDB","OCDB","OCDB","SMR01","SMR01","SMR01","SMR01","SMR01","SMR01","SMR01","SMR01","SMR01","SMR01","SMR01","SMR01","SMR01","SMR01","SMR01","SMR01","OCDB","OCDB","OCDB","OCDB","OCDB","TRAK","TRAK","TRAK","OCDB","OCDB","QPI","OCDB","OCDB","OCDB","OCDB","OCDB","OCDB","OCDB","OCDB","OCDB","OCDB","OCDB","OCDB","OCDB","QPI","OCDB","OCDB","OCDB","OCDB","OCDB","OCDB","OCDB","OCDB","OCDB","OCDB","OCDB","OCDB","OCDB","NRS","NRS","? ICD-10","? ICD-10","QPI","OCDB","OCDB","OCDB","OCDB","OCDB","SMR01","SMR01","OCDB","SLTU Database",null,"SMR01","SMR01","SMR01","SMR01","SMR01","SMR01","SMR01","SMR01","SMR01","SMR01","SMR01","SMR01","SMR01","SMR01","SMR01","SMR01","SMR01","SMR01","SMR01","SMR01","SMR01","SMR01","SMR01","SMR01","SMR01","SMR01","OCDB","OCDB","OCDB","OCDB","OCDB","OCDB","OCDB","OCDB"],"Data Source 2":[null,"Chemocare","QPI",null,"SMR06","QPI","QPI","QPI","Chemocare","Chemocare","Chemocare","GRO","QPI","QPI","QPI",null,"SMR06","QPI","QPI",null,null,"SMR06","SMR06","SMR06",null,null,"SMR06","SMR06",null,null,"SMR06",null,"SMR06",null,null,null,null,null,null,null,"SESCDB","SESCDB","SESCDB","SESCDB","SESCDB","SESCDB","SESCDB","SESCDB","Chemocare","SESCDB","SESCDB","SESCDB","SESCDB","SESCDB","SESCDB","SESCDB","SESCDB","SESCDB","SESCDB","SESCDB","SESCDB","SESCDB","SESCDB","SESCDB","SESCDB","SESCDB","SESCDB",null,null,null,null,null,null,null,null,null,null,"SMR06",null,"SMR06","QPI","QPI","SESCDB","SESCDB","SESCDB","SESCDB","SESCDB","SESCDB","SESCDB","SESCDB","QPI",null,null,null,null,null,null,"SMR06","SMR06","SMR06","SMR06","SMR06","SMR06","SMR06","SMR06","SMR06","SMR06",null,null,null,null,null,"SMR06","SMR06","SMR06","SMR06","SMR06","SMR06",null,null,null,null,"SMR01","QPI",null,null,null,"SMR06",null,null,null,"Chemocare","OCDB","OCDB",null,"SMR06","SMR06",null,"SMR06","OCDB",null,null,"SMR06","SMR06","SMR06","SMR06","SMR06","SMR06","SMR06","SMR06","SMR06","SMR06","SMR06","SMR06","SMR06","SMR06","SMR06","SMR06","SMR01","SMR01","SMR01","SMR01","SMR01","SMR01","SMR01","GP Records","GP Records","GP Records","GP Records","GP Records","GP Records","GP Records",null,null,null,null,null,"GP Records","GP Records","GP Records","GP Records","GP Records","GP Records","GP Records","GP Records","GP Records",null,null,null,null,null,null,null,"SMR06","SMR06","SMR06","SMR06","SMR06","SMR06","SMR06","SMR06","SMR06","SMR06","SMR06","SMR06","SMR06","SMR06","SMR06",null,"QPI","QPI",null,"QPI",null,null,null,"QPI",null,null,"SMR06",null,"SMR01","SMR01","SMR06","Chemocare","Chemocare","Chemocare","Chemocare",null,null,"Chemocare",null,"Chemocare","SMR06","ARIA","ARIA","ARIA","ARIA","ARIA","ARIA","ARIA",null,null,null,null,null,"QPI","QPI",null,"NRS","NRS","SESCDB","QPI","QPI","QPI","QPI","SESCDB","SMR06","SMR06","Chemocare",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"TRAK","TRAK","TRAK","TRAK","TRAK","TRAK",null,null,null,null,null,null,null,null],"Data Source 3":[null,null,"SMR06",null,null,"SMR06","SMR06","SMR06",null,null,null,"QPI","SMR06","SMR06","OCDB",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"QPI","QPI",null,null,null,null,null,null,"QPI","QPI",null,null,null,null,null,null,null,"QPI",null,null,null,null,null,null,null,null,null,null,"SESCDB",null,"SESCDB",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"SMR06","SMR06",null,null,null,null,null,null,null,"TRAK","TRAK","TRAK",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"GP Records","GP Records","GP Records","GP Records","GP Records","GP Records","GP Records","TRAK","TRAK","TRAK","TRAK","TRAK","TRAK","TRAK",null,null,null,null,null,"TRAK","TRAK","TRAK","TRAK","TRAK","TRAK","TRAK","TRAK","TRAK",null,null,null,null,null,null,null,"QPI","QPI","QPI","QPI","QPI","QPI","QPI","QPI","QPI","QPI","QPI","QPI","QPI","QPI","QPI",null,"SMR06","SMR06",null,"SMR06",null,null,null,"SMR06",null,null,null,null,null,"QPI",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"SESCDB","OCDB",null,null,null,"GRO","SMR06","SMR06","SMR06","SMR06",null,null,null,"SMR01",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"Data Source 4":[null,null,null,null,null,null,null,"SESCDB",null,null,null,null,"SESCDB","SESCDB",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"PIS","PIS","PIS","PIS","PIS","PIS",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"TRAK","TRAK","TRAK","TRAK","TRAK","TRAK","TRAK","TRAK","TRAK","TRAK","TRAK","TRAK","TRAK","TRAK","TRAK",null,"SESCDB","SESCDB",null,"SESCDB",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"SESCDB","SESCDB","SESCDB","SESCDB",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"Data Category":["Demographics",null,"Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Outcomes & Follow-up","Outcomes & Follow-up","Outcomes & Follow-up","Outcomes & Follow-up","Demographics","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Biomedical Test","Biomedical Test","Biomedical Test","Biomedical Test","Biomedical Test","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Outcomes & Follow-up","Outcomes & Follow-up","Outcomes & Follow-up","Outcomes & Follow-up","Outcomes & Follow-up","Outcomes & Follow-up","Outcomes & Follow-up","Outcomes & Follow-up","Outcomes & Follow-up","Outcomes & Follow-up","Outcomes & Follow-up","Demographics","Demographics","Demographics","Demographics","Demographics","Demographics","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Outcomes & Follow-up","Outcomes & Follow-up",null,"Demographics","Demographics","Demographics","Demographics","Demographics","Demographics","Demographics","Demographics","Demographics","Demographics","Demographics","Demographics","Demographics","Biomedical Test","Biomedical Test","Biomedical Test","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Diagnosis & Pathology Details","Biomedical Test","Biomedical Test","Biomedical Test","Biomedical Test","Biomedical Test","Biomedical Test","Biomedical Test","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment",null,"Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Outcomes & Follow-up","Outcomes & Follow-up","Outcomes & Follow-up","Outcomes & Follow-up","Outcomes & Follow-up","Outcomes & Follow-up","Outcomes & Follow-up","Outcomes & Follow-up","Outcomes & Follow-up","Outcomes & Follow-up","Outcomes & Follow-up","Outcomes & Follow-up","Outcomes & Follow-up","Outcomes & Follow-up","Outcomes & Follow-up","Outcomes & Follow-up","Outcomes & Follow-up","Outcomes & Follow-up","Outcomes & Follow-up","Outcomes & Follow-up","Outcomes & Follow-up","Outcomes & Follow-up","Outcomes & Follow-up","Outcomes & Follow-up","Healthcare Resource Utilisation","Healthcare Resource Utilisation","Healthcare Resource Utilisation","Healthcare Resource Utilisation","Healthcare Resource Utilisation","Healthcare Resource Utilisation","Healthcare Resource Utilisation","Healthcare Resource Utilisation","Healthcare Resource Utilisation","Healthcare Resource Utilisation","Healthcare Resource Utilisation","Healthcare Resource Utilisation","Healthcare Resource Utilisation","Healthcare Resource Utilisation","Healthcare Resource Utilisation","Healthcare Resource Utilisation","Healthcare Resource Utilisation","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Systemic Therapy and Treatment","Outcomes & Follow-up","Outcomes & Follow-up","Outcomes & Follow-up","Outcomes & Follow-up","Outcomes & Follow-up","Outcomes & Follow-up","Outcomes & Follow-up","Outcomes & Follow-up"],"Data Sub-Category-1":[null,null,null,null,"Topography","Morphology","Morphology","Surgery","SACT","SACT","SACT","Timelines","Recurrance","Recurrance","Death",null,null,null,null,null,null,"Morphology",null,null,null,null,null,"Morphology",null,null,null,"Morphology","Morphology","Biologic Test","Biologic Test","Biologic Test","Biologic Test","Biologic Test","Surgery","Surgery","Surgery","Surgery","Surgery","Surgery","Surgery","Surgery","Surgery","Surgery","SACT","SACT","SACT","SACT","SACT","SACT","SACT","SACT","SACT","SACT","SACT","SACT","SACT","SACT","SACT","SACT","SACT","SACT","SACT","SACT","SACT","SACT","SACT","SACT","SACT","SACT","SACT","SACT","SACT","SACT","SACT","SACT","Death","Death","Disease-Free","Disease-Free","Recurrance","Recurrance","Recurrance","Recurrence","Recurrence","Recurrence","Follow-up",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"Surgery","Surgery","Surgery","SACT","SACT","SACT","SACT","SACT","SACT","Death","Follow-up",null,null,null,null,null,null,null,null,"Socio-Economics","Socio-Economics",null,null,null,null,"Medical Test","Medical Test","Medical Test",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"Investigation","Investigation","Investigation","Investigation","Investigation","Biologic Test","Biologic Test","Interventional radiology","Interventional radiology","Interventional radiology","Interventional radiology","Interventional radiology","Interventional radiology","Interventional radiology","Interventional radiology","Interventional radiology","Interventional radiology","Endoscopy","Endoscopy","Endoscopy","Endoscopy","Endoscopy","Surgery","Surgery","Surgery","Surgery","Surgery","Surgery",null,"Surgery","Surgery","Surgery","Surgery","Surgery","Surgery","Surgery","SACT - including immunotherapy","SACT - including immunotherapy","SACT - including immunotherapy","SACT - including immunotherapy","SACT - including immunotherapy","SACT - including immunotherapy","SACT - including immunotherapy","SACT - including immunotherapy","SACT - including immunotherapy","SACT - including immunotherapy","SACT - including immunotherapy","SACT - including immunotherapy","SACT - including immunotherapy","SACT - including immunotherapy","SACT - including immunotherapy","SACT - including immunotherapy","SACT - including immunotherapy","SACT - including immunotherapy","SACT - including immunotherapy",null,null,null,null,null,"Recurrance","Death","Death","Death","Death","Disease-free","Recurrance","Recurrance","Recurrance","Recurrance","Follow-up","Recurrance","Recurrance","Recurrance","Recurrance",null,null,null,null,"Comorbidity",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"Surgery","Surgery","Surgery","Surgery","Surgery","Surgery","Morbidity","Morbidity","Morbidity","Morbidity","Morbidity","Morbidity","Morbidity","Morbidity"],"Data Sub-Category-2...10":[null,null,null,null,null,null,null,null,"Chemotherapy","Chemotherapy","Chemotherapy","Timelines",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"Chemotherapy","Chemotherapy","Chemotherapy","Chemotherapy","Chemotherapy","Chemotherapy","Chemotherapy","Chemotherapy","Chemotherapy","Chemotherapy","Chemotherapy","Chemotherapy","Chemotherapy","Chemotherapy","Chemotherapy","Chemotherapy","Chemotherapy","Hormone Therapy","Hormone Therapy","Hormone Therapy","Hormone Therapy","Hormone Therapy","Hormone Therapy","Hormone Therapy","Hormone Therapy","Hormone Therapy","Hormone Therapy","Hormone Therapy","Hormone Therapy","Radiotherapy","Radiotherapy","Radiotherapy",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"Radiotherapy","Radiotherapy",null,null,"Immunotherapy","Immunotherapy",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"Anthropometric Test","Anthropometric Test","Anthropometric Test",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"Biomarker","Biomarker",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"Chemotherapy","Chemotherapy","Chemotherapy","Chemotherapy","Chemotherapy","Chemotherapy","Chemotherapy","Chemotherapy","Chemotherapy","Chemotherapy","Chemotherapy","Radiotherapy","Radiotherapy","Radiotherapy","Radiotherapy","Radiotherapy","Radiotherapy","Radiotherapy","Radiotherapy",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"Timelines","Treatment","Treatment","Treatment","Treatment",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"Data Sub-Category-2...11":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"Data Sub-Category-3":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"OMOP Variable Domain":["Observation","Observation","Measurement","Condition","Spec Anatomic Site",null,null,"Observation",null,null,null,null,null,null,null,null,"Measurement",null,null,"Observation","Observation","Observation",null,null,null,null,null,null,null,null,null,null,null,null,"Staging/Scales",null,null,null,null,"Observation","Procedure","Procedure","Procedure","Procedure","Procedure","Procedure","Procedure","Procedure","Observation",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"Measurement",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"OMOP Variable Concept":["Standard","Standard","Standard","Non-Standard","Non-Standard",null,null,"Standard",null,null,null,null,null,null,null,null,"Standard",null,null,"Standard","Standard","Standard",null,null,null,null,null,null,null,null,null,null,null,null,"Standard",null,null,null,null,"Standard","Standard","Standard","Standard","Standard","Standard","Standard","Standard","Standard","Standard",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"Standard",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"OMOP Variable ID":[4307859,4308014,734306,1567568,44497877,"NA","NA",3031857,"NA","NA","NA","NA","NA","NA","NA","NA",734306,"NA","NA",305879002,161712005,248803004,"NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA",729854,"NA","NA","NA","NA",3031857,413358,4129190,4201533,4263386,4232096,4232096,4232096,4232096,3011998,"NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA",734306,"NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA"],"VOCAB":["SNOMED","SNOMED","Cancer Modifier","ICD10CM","ICD03",null,null,"LOINC",null,null,null,null,null,null,null,null,"Cancer Modifier",null,null,"SNOMED","SNOMED","SNOMED",null,null,null,null,null,null,null,null,null,null,null,null,"OMOP Extension",null,null,null,null,"LOINC","SNOMED","SNOMED","SNOMED","SNOMED","SNOMED","SNOMED","SNOMED","SNOMED","LOINC",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"Cancer Modifier",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"VOCAB VARIABLE NAME":["Age at diagnosis","ECOG performance status","Initial Diganosis","Malignant neoplasm of ovary","Ovary",null,null,"Surgical operation date Cancer",null,null,null,null,null,null,null,null,"Initial Diganosis",null,null,"Seen by breast screening service","Menopause","Position of the breast",null,null,null,null,null,null,null,null,null,null,null,null,"Oncotype DX breast recurrence score",null,null,null,null,"Surgical operation date Cancer","Mastectomy incision","Wide local excision of breast lesion","Axillary lymph node procedure","Sentinel lymph node biopsy","Date of procedure","Date of procedure","Date of procedure","Date of procedure","Date 1st chemotherapy treatment Cancer",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"Initial Diganosis",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"VOCAB VARIABLE CODE":["42349009","423740007","init_diag","C56","C56.9",null,null,"42781-5",null,null,null,null,null,null,null,null,"init_diag",null,null,"4140934","4059477","4088291",null,null,null,null,null,null,null,null,null,null,null,null,"OMOP51818",null,null,null,null,"42781-5","278723004","237371007","301796003","396487001","439272007","439272007","439272007","439272007","21927-9",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"init_diag",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"completeness":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"accuracy":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"Site":["Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh","Edinburgh"],"Cancer":["Ovarian","Ovarian","Ovarian","Ovarian","Ovarian","Ovarian","Ovarian","Ovarian","Ovarian","Ovarian","Ovarian","Ovarian","Ovarian","Ovarian","Ovarian","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Breast (early)","Lung (Stage 3)","Lung (Stage 3)","Lung (Stage 3)","Lung (Stage 3)","Lung (Stage 3)","Lung (Stage 3)","Lung (Stage 3)","Lung (Stage 3)","Lung (Stage 3)","Lung (Stage 3)","Lung (Stage 3)","Lung (Stage 3)","Lung (Stage 3)","Lung (Stage 3)","Lung (Stage 3)","Lung (Stage 3)","Lung (Stage 3)","Lung (Stage 3)","Lung (Stage 3)","Lung (Stage 3)","Lung (Stage 3)","Lung (Stage 3)","Lung (Stage 3)","Lung (Stage 3)","Lung (Stage 3)","Lung (Stage 3)","Lung (Stage 3)","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB","Liver/HPB"]},"columns":[{"id":".selection","name":"","type":null,"resizable":false,"width":45,"selectable":true},{"id":"Data Item","name":"Data Item","type":"character"},{"id":"Data Field","name":"Data Field","type":"character"},{"id":"Data Format","name":"Data Format","type":"character"},{"id":"Data Source Primary","name":"Data Source Primary","type":"character"},{"id":"Data Source 2","name":"Data Source 2","type":"character"},{"id":"Data Source 3","name":"Data Source 3","type":"character"},{"id":"Data Source 4","name":"Data Source 4","type":"character"},{"id":"Data Category","name":"Data Category","type":"character"},{"id":"Data Sub-Category-1","name":"Data Sub-Category-1","type":"character"},{"id":"Data Sub-Category-2...10","name":"Data Sub-Category-2...10","type":"character"},{"id":"Data Sub-Category-2...11","name":"Data Sub-Category-2...11","type":"logical"},{"id":"Data Sub-Category-3","name":"Data Sub-Category-3","type":"logical"},{"id":"OMOP Variable Domain","name":"OMOP Variable Domain","type":"character"},{"id":"OMOP Variable Concept","name":"OMOP Variable Concept","type":"character"},{"id":"OMOP Variable ID","name":"OMOP Variable ID","type":"numeric"},{"id":"VOCAB","name":"VOCAB","type":"character"},{"id":"VOCAB VARIABLE NAME","name":"VOCAB VARIABLE NAME","type":"character"},{"id":"VOCAB VARIABLE CODE","name":"VOCAB VARIABLE CODE","type":"character"},{"id":"completeness","name":"completeness","type":"logical"},{"id":"accuracy","name":"accuracy","type":"logical"},{"id":"Site","name":"Site","type":"character"},{"id":"Cancer","name":"Cancer","type":"character"}],"groupBy":["Cancer","Site"],"resizable":true,"filterable":true,"searchable":true,"defaultPageSize":25,"showPageSizeOptions":true,"pageSizeOptions":[25,50,100],"paginationType":"jump","paginateSubRows":true,"selection":"multiple","onClick":"select","highlight":true,"outlined":true,"bordered":true,"striped":true,"nowrap":true,"theme":{"borderColor":"#dfe2ef","stripedColor":"#f6f8fa","highlightColor":"#f0f5f9","cellPadding":"8px 12px","style":{"fontFamily":"-apple-system, BlinkMacSystemFont, Segoe, UI, Helvetica, Arial, sans-serif"},"rowSelectedStyle":{"backgroundColor":"#eee","boxShadow":"inset 2px 0 0 0 #ffa62d"},"searchInputStyle":{"width":"100%"}},"dataKey":"8c9c77c1d7d9210729a34309f391229f"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="about" class="section level1">
+<h1>About</h1>
+<p><strong>The CRUK MetaData Dashboard</strong></p>
+<p>This dashboard is built with R using the Rmakrdown framework and can
+easily reproduce by others. The code behind the dashboard available <a
+href="https://github.com/cmclean5/CRUKScotlandMetaData">here</a></p>
+<p><strong>Data</strong></p>
+<p><strong>Packages</strong></p>
+<ul>
+<li>Dashboard interface - the <a
+href="https://rmarkdown.rstudio.com/flexdashboard/">flexdashboard</a>
+package.</li>
+<li>Data manipulation - <a
+href="https://dplyr.tidyverse.org/">dplyr</a>, and <a
+href="https://tidyr.tidyverse.org/">tidyr</a></li>
+<li>Tables - the <a href="https://rstudio.github.io/DT/">DT</a>
+package</li>
+</ul>
+<p><strong>Deployment and reproducibly</strong></p>
+<p>The dashboard was deployed to Github docs.</p>
+</div>
+
+</div>
+
+<script>
+$(document).ready(function() {
+  // add bootstrap table styles to pandoc tables
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed table-sm');
+
+  // initialize mathjax
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+  document.getElementsByTagName("head")[0].appendChild(script);
+
+});
+</script>
+
+<div id="flexdashboard-source-code">
+<pre class="line-numbers"><code class="language-r">---
+title: "CRUKScotland MetaData Catalogue"
+output: 
+  flexdashboard::flex_dashboard:
+    theme: 
+      version: 5
+      bootswatch: cosmo #flatly
+    source_code: embed
+    orientation: rows
+    vertical_layout: fill
+    navbar:
+      - { href: https://github.com/cmclean5/CRUKScotlandMetaData, align: right, icon: "fa-github" }
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(reactable)
+library(knitr)
+library(readxl)
+library(data.table)
+library(stringr)
+library(dplyr)
+library(here)
+library(shiny)
+
+## How to add Rmarkdown flxdashboard to github,
+## Ref: https://www.r-bloggers.com/2020/09/deploying-flexdashboard-on-github-pages/
+
+source(here("Scripts/loadFunctions.R"))
+
+ICONS=c("fa-hospital-symbol","fa-file-medical")
+```
+
+```{r read file, echo=FALSE, warning=FALSE}
+  
+   ## read meta-data extract
+   df = as.data.table(readxl::read_xlsx("metaData_v4.xlsx",sheet=1))
+
+   ## data processing
+   encoded     = c("Site","Cancer")
+
+   ## check any duplicate rows per Site or Cancer type
+   df = duplicate.rows(x=df, encoded=encoded[1])
+   df = duplicate.rows(x=df, encoded=encoded[2])
+   
+   
+   ## Convert our one-hot encoding for sites to data column called
+   ## Site
+   cnames    = colnames(df)
+   col.indx  = grepl(encoded[1], cnames)
+   site.type = gsub(encoded[1],"",cnames[col.indx])
+   site.type = str_squish(site.type)
+ 
+   Svals        = rep(0,length(site.type))
+   names(Svals) = site.type
+     
+    df = df %&gt;% 
+        rowwise() %&gt;% 
+        mutate(tmp=site.type[which.max(c_across(cnames[col.indx]))]) %&gt;% 
+        ungroup %&gt;% 
+        select(-cnames[col.indx]) %&gt;%
+        mutate(Site=as.character(tmp)) %&gt;%
+        select(-tmp)
+
+   reorder = unique(df$Site)
+   Sindx   = table(df$Site)
+   Svals[match(names(Sindx),names(Svals))]=Sindx
+   Scols   = rep("#b2b2b2",length(Svals))
+   
+   ## Convert our one-hot encoding for v. cancer cohorts to data column called
+   ## Cancer
+   cnames      = colnames(df)
+   col.indx    = grepl(encoded[2], cnames)
+   tumour.type = gsub(encoded[2],"",cnames[col.indx])
+   tumour.type = str_squish(tumour.type)
+ 
+   Cvals        = rep(0,length(tumour.type))
+   names(Cvals) = tumour.type
+     
+   ## Ref: https://stackoverflow.com/questions/64230674/how-to-turn-one-hot-encoded-variables-to-a-single-factor-in-r
+   
+    df = df %&gt;% 
+        rowwise() %&gt;% 
+        mutate(tmp=tumour.type[which.max(c_across(cnames[col.indx]))]) %&gt;% 
+        ungroup %&gt;% 
+        select(-cnames[col.indx]) %&gt;%
+        mutate(Cancer=as.character(tmp)) %&gt;%
+        select(-tmp)
+
+   reorder = unique(df$Cancer)
+   Cindx   = table(df$Cancer)
+   Cvals[match(names(Cindx),names(Cvals))]=Cindx
+   
+   ##Cvals   = Cvals[match(reorder,names(Cvals))]
+   
+   ##Ccols   = c("info","warning","primary","success")
+   Ccols  = rep("#f5a5dc",length(Cvals))
+```
+
+Summary
+=======================================================================
+
+Row1
+----------------------------------------------
+
+### Site 1
+```{r}
+valueBox(Svals[1],
+         icon=ICONS[1],
+         caption=names(Svals)[1],
+         color=Scols[1])
+```
+
+### Site 2
+```{r}
+valueBox(Svals[2],
+         icon=ICONS[1],
+         caption=names(Svals)[2],
+         color=Scols[2])
+```
+
+### Site 3
+```{r}
+valueBox(Svals[3],
+         icon=ICONS[1],
+         caption=names(Svals)[3],
+         color=Scols[3])
+```
+
+
+Row2
+----------------------------------------------
+
+### type 1
+```{r}
+valueBox(Cvals[1],
+         icon=ICONS[2],
+         caption=names(Cvals)[1],
+         color=Ccols[1])
+```
+
+### type 2
+```{r}
+valueBox(Cvals[2],
+         icon=ICONS[2],
+         caption=names(Cvals[2]),
+         color=Ccols[2])
+```
+
+### type 3
+```{r}
+valueBox(Cvals[3],
+         icon=ICONS[2],
+         caption=names(Cvals)[3],
+         color=Ccols[3])
+```
+
+### type 4
+```{r}
+valueBox(Cvals[4],
+         icon=ICONS[2],
+         caption=names(Cvals)[4],
+         color=Ccols[4])
+```
+
+### type 5
+```{r}
+valueBox(Cvals[5],
+         icon=ICONS[2],
+         caption=names(Cvals)[5],
+         color=Ccols[5])
+```
+
+### type 6
+```{r}
+valueBox(Cvals[6],
+         icon=ICONS[2],
+         caption=names(Cvals[6]),
+         color=Ccols[6])
+```
+
+### type 7
+```{r}
+valueBox(Cvals[7],
+         icon=ICONS[2],
+         caption=names(Cvals)[7],
+         color=Ccols[7])
+```
+
+### type 8
+```{r}
+valueBox(Cvals[8],
+         icon=ICONS[2],
+         caption=names(Cvals)[8],
+         color=Ccols[8])
+```
+
+Row3
+----------------------------------------------
+
+```{r display table, echo=FALSE}
+   reactable(df, 
+             groupBy=c("Cancer","Site"),
+             filterable=TRUE,
+             searchable=TRUE,
+             showPageSizeOptions=TRUE,
+             paginateSubRows=TRUE,
+             bordered=TRUE,
+             outlined=TRUE,
+             striped=TRUE,
+             highlight=TRUE,
+             wrap=FALSE,
+             resizable=TRUE,
+             selection="multiple",
+             #defaultSelected=c(1,2),
+             onClick="select",
+             paginationType="jump",
+             pageSizeOptions=c(25,50,100),
+             defaultPageSize=25,
+             theme=reactableTheme(borderColor="#dfe2ef",
+                                  stripedColor="#f6f8fa",
+                                  highlightColor="#f0f5f9",
+                                  cellPadding="8px 12px",
+                                  style=list(fontFamily="-apple-system, BlinkMacSystemFont, Segoe, UI, Helvetica, Arial, sans-serif"),
+                                  searchInputStyle=list(width="100%"),
+                                  rowSelectedStyle=list(backgroundColor="#eee",
+                                                        boxShadow="inset 2px 0 0 0 #ffa62d")#,
+                                  #headerStyle=list(borderColor="#555") 
+                                  )
+             )
+```
+
+About
+=======================================================================
+
+**The CRUK MetaData Dashboard**
+
+This dashboard is built with R using the Rmakrdown framework and can easily reproduce by others. The code behind the dashboard available [here](https://github.com/cmclean5/CRUKScotlandMetaData)
+
+**Data**
+
+**Packages**
+
+* Dashboard interface - the [flexdashboard](https://rmarkdown.rstudio.com/flexdashboard/) package. 
+* Data manipulation - [dplyr](https://dplyr.tidyverse.org/), and [tidyr](https://tidyr.tidyverse.org/)
+* Tables - the [DT](https://rstudio.github.io/DT/) package
+
+**Deployment and reproducibly**
+
+The dashboard was deployed to Github docs. 
+</code></pre>
+</div>
+<script type="text/javascript">
+$(document).ready(function () {
+  FlexDashboard.init({
+    fillPage: true,
+    orientation: "rows",
+    storyboard: false,
+    defaultFigWidth: 576,
+    defaultFigHeight: 460,
+    defaultFigWidthMobile: 360,
+    defaultFigHeightMobile: 460,
+    resize_reload: true
+  });
+  var navbar = $(".navbar").first();
+  var body = $("body").first();
+  var sidebar = $(".section.sidebar").first();
+  function addNavbarPadding() {
+    var navHeight = navbar.outerHeight();
+    body.css("padding-top", (navHeight + 8) + "px");
+    sidebar.css("top", navHeight + "px");
+    var resizeEvent = window.document.createEvent("UIEvents");
+    resizeEvent.initUIEvent("resize", true, false, window, 0);
+    window.dispatchEvent(resizeEvent);
+  }
+  if (!window.Shiny) setTimeout(addNavbarPadding, 100);
+  $(document).on("shiny:idle", function() {
+    setTimeout(addNavbarPadding, 50);
+  });
+});
+</script>
+
+</body>
+</html>

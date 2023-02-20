@@ -2,7 +2,7 @@ name: "webSite"
 title: "CRUK Scotland MetaData"
 description: |
   My Website
-output_dir: "_site"
+output_dir: "doc"
 navbar:
   search: true
   right:
