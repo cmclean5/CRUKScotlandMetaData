@@ -1,5 +1,5 @@
 ---
-title: "Dashboard"
+title: "CRUKScotland MetaData Catalogue"
 output: 
   flexdashboard::flex_dashboard:
     theme: 

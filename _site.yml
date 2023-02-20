@@ -2,7 +2,7 @@ name: "webSite"
 title: "CRUK Scotland MetaData"
 description: |
   My Website
-output_dir: "doc"
+output_dir: "docs"
 navbar:
   search: true
   right:
@@ -17,6 +17,12 @@ navbar:
       menu: 
         - text: "Breast"
           href: breastCancer.html
+    - text: "Examples"
+      menu: 
+        - text: "ER & HER2 status in SBC"
+          href: example_1.html
+        - text: "SACT in eBC"
+          href: example_2.html
     - text: "Methods"
       href: methods.html
     - text: "About"

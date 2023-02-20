@@ -1,0 +1,26 @@
+---
+title: "ER & HER2 status in SBC"
+description: |
+  Deriving ER & HER2 receptor status from routine data: Analyst's Guide
+author:
+  - name: Maria McMenemy
+    #url: https://example.com/norajones
+    #affiliation: Spacely Sprockets
+    #affiliation_url: https://example.com/spacelysprokets
+#date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Worked example in R to derive the data and uses data from the following data sources:
+
+* SMR06 - The Cancer Registry
+* SESCD
+* Chemocare
+* Chemotherapy from the SESCD
+* SCAN Audit
+
+The report includes a method on how to derive ER and HER2 receptor status and an analysis of the accuracy of the imputation.  

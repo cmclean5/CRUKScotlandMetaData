@@ -1,13 +1,12 @@
 ---
 title: "Methods guidance"
 description: |
-
-author:
-  - name: Peter Hall 
-    url: https://www.ed.ac.uk/profile/peter-hall
-    affiliation: Edinburgh Cancer Research Centre, University of Edinburgh
-    affiliation_url: https://www.ed.ac.uk/cancer-centre
-date: "`r Sys.Date()`"
+#author:
+#  - name: Peter Hall 
+#    url: https://www.ed.ac.uk/profile/peter-hall
+#    affiliation: Edinburgh Cancer Research Centre, University of Edinburgh
+#    affiliation_url: https://www.ed.ac.uk/cancer-centre
+#date: "`r Sys.Date()`"
 output: distill::distill_article
 ---
 

@@ -1,0 +1,35 @@
+---
+title: "SACT in eBC"
+description: |
+  Neo-adjuvant SACT in Early HER2+ Breast Cancer Patients:  Analyst's Guide
+author:
+  - name: Maria McMenemy
+    #url: https://example.com/norajones
+    #affiliation: Spacely Sprockets
+    #affiliation_url: https://example.com/spacelysprokets
+#date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+This report contains the R code used to derive the data and uses data from the following data sources:
+
+* SMR06
+* Chemocare
+* SMR01
+* Secondary Breast Cancer CNS Database
+
+The following patient characteristics were derived and summarised:
+
+* Age
+* Sex
+* Ethnicity
+* TNM Staging
+* Hormone Receptor status
+* Time from diagnosis to first chemotherapy
+* Time from diagnosis to first surgery
+* Neo-adjuvant SACT Regime received
+* Type of surgery  

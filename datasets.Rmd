@@ -2,20 +2,6 @@
 title: "Datasets"
 description: |
   Description of routinely collected national NHS datasets used for analysts defining cancer cohorts.
-author:
-  - name: Peter Hall 
-    url: https://www.ed.ac.uk/profile/peter-hall
-    affiliation: Edinburgh Cancer Research Centre, University of Edinburgh
-    affiliation_url: https://www.ed.ac.uk/cancer-centre
-  - name: Mah&eacute;va Vallet
-    url: https://www.ed.ac.uk/profile/maheva-vallet
-    affiliation: Edinburgh Cancer Research Centre, University of Edinburgh
-    affiliation_url: https://www.ed.ac.uk/cancer-centre
-  - name: Giovanni Tramonti
-    url: 
-    affiliation: Edinburgh Cancer Research Centre, University of Edinburgh
-    affiliation_url: https://www.ed.ac.uk/cancer-centre
-date: "`r Sys.Date()`"
 output: 
   distill::distill_article:
     code_folding: false
