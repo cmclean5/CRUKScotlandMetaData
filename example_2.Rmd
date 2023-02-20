@@ -1,7 +1,7 @@
 ---
-title: "SACT in eBC"
+title: "ER & HER2 status in SBC"
 description: |
-  Neo-adjuvant SACT in Early HER2+ Breast Cancer Patients:  Analyst's Guide
+  Describing treatment sequences in ER+ HER2- secondary breast cancer patients: Analyst's Guide
 author:
   - name: Maria McMenemy
     #url: https://example.com/norajones
@@ -17,19 +17,15 @@ knitr::opts_chunk$set(echo = FALSE)
 
 This report contains the R code used to derive the data and uses data from the following data sources:
 
-* SMR06
-* Chemocare
-* SMR01
 * Secondary Breast Cancer CNS Database
+* South East Scotland Cancer Database (SESCD) - Access database, although this is to be moved to an SQL server
+  * Main Table
+  * Hormone Table
+* Chemocare
+* Prescribing Information System (PIS)
+  * e-Prescribed data
+* Fulvestrant Audit data
+* NRS Deaths data
 
-The following patient characteristics were derived and summarised:
+Treatment sequence is derived in an aggregated as well as a more granular format and results are displayed in interactive Sankey and Decision Tree plots.
 
-* Age
-* Sex
-* Ethnicity
-* TNM Staging
-* Hormone Receptor status
-* Time from diagnosis to first chemotherapy
-* Time from diagnosis to first surgery
-* Neo-adjuvant SACT Regime received
-* Type of surgery  

@@ -2,6 +2,21 @@
 title: "CRUK Scotland Meta Data Catalogue"
 description: |
   Cancer Meta Data Catalogue derived from Scottish datasets.
+author:
+  - name: Peter Hall 
+    url: https://www.ed.ac.uk/profile/peter-hall
+    affiliation: Edinburgh Cancer Research Centre, University of Edinburgh
+    affiliation_url: https://www.ed.ac.uk/cancer-centre
+  - name: Mah&eacute;va Vallet
+    url: https://www.ed.ac.uk/profile/maheva-vallet
+    affiliation: Edinburgh Cancer Research Centre, University of Edinburgh
+    affiliation_url: https://www.ed.ac.uk/cancer-centre
+  - name: Giovanni Tramonti
+    url: 
+    affiliation: Edinburgh Cancer Research Centre, University of Edinburgh
+    affiliation_url: https://www.ed.ac.uk/cancer-centre
+  - name: Maria McMenemy
+date: "`r Sys.Date()`"
 site: distill::distill_website
 ---
 

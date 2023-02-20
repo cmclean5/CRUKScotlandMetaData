@@ -19,10 +19,12 @@ navbar:
           href: breastCancer.html
     - text: "Examples"
       menu: 
-        - text: "ER & HER2 status in SBC"
+        - text: "ER & HER2 status"
           href: example_1.html
-        - text: "SACT in eBC"
+        - text: "ER & HER2 status in SBC"
           href: example_2.html
+        - text: "SACT in eBC"
+          href: example_3.html
     - text: "Methods"
       href: methods.html
     - text: "About"

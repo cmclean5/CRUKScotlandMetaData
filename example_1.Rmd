@@ -1,5 +1,5 @@
 ---
-title: "ER & HER2 status in SBC"
+title: "ER & HER2 status"
 description: |
   Deriving ER & HER2 receptor status from routine data: Analyst's Guide
 author:
