@@ -2,6 +2,21 @@
 title: "About this site"
 description: |
   Some additional details about the website
+author:
+  - name: Peter Hall 
+    url: https://www.ed.ac.uk/profile/peter-hall
+    affiliation: Edinburgh Cancer Research Centre, University of Edinburgh
+    affiliation_url: https://www.ed.ac.uk/cancer-centre
+  - name: Mah&eacute;va Vallet
+    url: https://www.ed.ac.uk/profile/maheva-vallet
+    affiliation: Edinburgh Cancer Research Centre, University of Edinburgh
+    affiliation_url: https://www.ed.ac.uk/cancer-centre
+  - name: Giovanni Tramonti
+    url: 
+    affiliation: Edinburgh Cancer Research Centre, University of Edinburgh
+    affiliation_url: https://www.ed.ac.uk/cancer-centre
+  - name: Maria McMenemy
+date: "`r Sys.Date()`"
 ---
 
 ```{r setup, include=FALSE}

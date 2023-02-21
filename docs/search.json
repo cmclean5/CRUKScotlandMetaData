@@ -3,77 +3,7 @@
     {
       "path": "about.html",
       "title": "About this site",
-      "description": "Some additional details about the website",
-      "author": [],
-      "contents": "\n\n\n\n",
-      "last_modified": "2023-02-20T23:53:04+00:00"
-    },
-    {
-      "path": "breastCancer.html",
-      "title": "Breast Cancer",
-      "description": "For analysts who are familiar with routinely collected national NHS data and provides a data dictionary, data quality and summary of methods for defining cohorts, characteristics and outcomes of breast cancer patients.\n",
-      "author": [],
-      "contents": "\n\nContents\nEarly Breast Cancer\nAdvanced Breast Cancer\n\nEarly Breast Cancer\nAdvanced Breast Cancer\n\n\n\n",
-      "last_modified": "2023-02-20T23:53:04+00:00"
-    },
-    {
-      "path": "dashboard.html",
-      "title": "&#32;",
-      "author": [],
-      "contents": "\n\n\n\n\n\n\n\n\n\n",
-      "last_modified": "2023-02-20T23:53:05+00:00"
-    },
-    {
-      "path": "datasets.html",
-      "title": "Datasets",
-      "description": "Description of routinely collected national NHS datasets used for analysts defining cancer cohorts.\n",
-      "author": [],
-      "contents": "\n\nContents\nSMR01\nSMR06\nData Quirks\nICDO Codes\nDiagnosis on the same day\nNon Lothian Residents\n\n\nOncology Database\nCHI Files\nChemocare (SACT)\nSCAN Audit\nPrescribing Information System (PIS)\n\nSMR01\nhttp://www.ndc.scot.nhs.uk/Data-Dictionary/SMR-Datasets//SMR01-General-Acute-Inpatient-and-Day-Case/\nA SMR01 is generated for patients receiving care in the General/ Acute specialties when the following events occur:\nInpatients and day cases are admitted to NHS hospitals from locations external to the NHS.\nInpatients and day cases are admitted to contracted NHS beds in non-NHS institutions.\nInpatients and day cases change specialty (with or without a change of consultant) when:\nAn Inpatient transfers to become an Inpatient in another specialty in the same hospital.\nAn inpatient becomes a Day Case in another specialty during the inpatient stay.\nA day case transfers to become an Inpatient in another specialty (except when the day case episode is during an\ninpatient stay and the patient is transferring back to the original consultant).\nA day case transfers back to resume an Inpatient stay but does NOT transfer back to the original consultant for\nmedical reasons.\nInpatients and day cases transfer from another NHS hospital (including contracted NHS beds in non-NHS institutions).\nInpatients and day cases change consultant for medical reasons within the same specialty when:\nAn inpatient transfers as an Inpatient to the care of a different consultant for medical reasons in the same\nspecialty in the same hospital.\nAn inpatient becomes a Day Case in the same specialty under a different consultant for medical reasons during\nthe inpatient stay.\nA day case transfers to become an Inpatient under the care of a different consultant in the same specialty\nfor medical reasons (except when the day case episode is during an inpatient stay and the patient is transferring\nback to the original consultant).\nA day case transfers back to resume an Inpatient stay in the same specialty but does NOT transfer back to the\noriginal consultant for medical reasons.\nInpatients move into and/or out of one of the valid significant facilities.\nInpatients return to hospital having been on pass for more than 5 days.\n\n\nSMR06\nhttp://www.isdscotland.org/Health-Topics/Cancer/Scottish-Cancer-Registry/\nSMR06 is derived from SOCRATES.\nCancer Registration is the collection, maintenance and management of data on every new diagnosis of cancer occurring in a population. In Scotland, approximately 55,000 cancer registrations are made annually. The Scottish Cancer Registry database holds over 1,800,000 records dating back to 1958, when the registry began.\nCancer registries are unique in being able to provide historical trend and population-based data to monitor changes in cancer incidence and survival over long periods of time. Cancer registries across the world share the same main objective: to deliver timely, comparable and high-quality cancer data.\nThe Scottish Cancer Registry contains information on all new cases of cancer including primary malignant neoplasms, carcinoma in situ, neoplasms of uncertain behaviour and benign brain and spinal cord tumours.\nThe data is in flat .dat file format and a file layout is needed in order to determine the location of each variable. Please note that the file layout can change over time so ensure that the correct file layout version is used.\nData Quirks\nICDO Codes\nInternational classification of diseases for oncology (ICD-O) codes are recorded in SMR06 with codes for both morphology and site.\nTumour type indicates the morphology (histology) of the tumour and comprises of the first four digits of the ICD-O morphology code and a fifth digit which denotes the behaviour of the tumour.\n\n\nTable 1: \n\n\nCode\n\n\nDescription\n\n\n0\n\n\nBenign\n\n\n1\n\n\nUncertain whether benign or malignant\n\n\n2\n\n\nCarcinoma in situ\n\n\n3\n\n\nMalignant - primary site\n\n\n6\n\n\nMalignant - metastatic site or secondary site\n\n\n9\n\n\nMalignant - uncertain whether primary or metastatic site\n\n\nDiagnosis on the same day\nIt is possible for patients to be diagnosed with multiple primary tumours on the same day; this must be accounted for when looking at patient history as these tumours can potentially be flagged as tumour history.\nNon Lothian Residents\nOn average 36% of patients in SMR06 each year are non-Lothian residents. These patients have been removed from the analysis as the data for their full history lies with the health board of residence which at the moment there is no access to.\nTo see a breakdown by treatment type please see the summary table.\nFor access please contact Analytical Services or NHS Lothian Research Safe Haven\nOncology Database\nCHI Files\nChemocare (SACT)\nSCAN Audit\nPrescribing Information System (PIS)\n\n\n\n",
-      "last_modified": "2023-02-20T23:53:06+00:00"
-    },
-    {
-      "path": "example_1.html",
-      "title": "ER & HER2 status",
-      "description": "Deriving ER & HER2 receptor status from routine data: Analyst's Guide\n",
-      "author": [
-        {
-          "name": "Maria McMenemy",
-          "url": {}
-        }
-      ],
-      "contents": "\nWorked example in R to derive the data and uses data from the following data sources:\nSMR06 - The Cancer Registry\nSESCD\nChemocare\nChemotherapy from the SESCD\nSCAN Audit\nThe report includes a method on how to derive ER and HER2 receptor status and an analysis of the accuracy of the imputation.\n\n\n\n",
-      "last_modified": "2023-02-20T23:53:06+00:00"
-    },
-    {
-      "path": "example_2.html",
-      "title": "ER & HER2 status in SBC",
-      "description": "Describing treatment sequences in ER+ HER2- secondary breast cancer patients: Analyst's Guide\n",
-      "author": [
-        {
-          "name": "Maria McMenemy",
-          "url": {}
-        }
-      ],
-      "contents": "\nThis report contains the R code used to derive the data and uses data from the following data sources:\nSecondary Breast Cancer CNS Database\nSouth East Scotland Cancer Database (SESCD) - Access database, although this is to be moved to an SQL server\nMain Table\nHormone Table\n\nChemocare\nPrescribing Information System (PIS)\ne-Prescribed data\n\nFulvestrant Audit data\nNRS Deaths data\nTreatment sequence is derived in an aggregated as well as a more granular format and results are displayed in interactive Sankey and Decision Tree plots.\n\n\n\n",
-      "last_modified": "2023-02-20T23:53:07+00:00"
-    },
-    {
-      "path": "example_3.html",
-      "title": "SACT in eBC",
-      "description": "Neo-adjuvant SACT in Early HER2+ Breast Cancer Patients:  Analyst's Guide\n",
-      "author": [
-        {
-          "name": "Maria McMenemy",
-          "url": {}
-        }
-      ],
-      "contents": "\nThis report contains the R code used to derive the data and uses data from the following data sources:\nSMR06\nChemocare\nSMR01\nSecondary Breast Cancer CNS Database\nThe following patient characteristics were derived and summarised:\nAge\nSex\nEthnicity\nTNM Staging\nHormone Receptor status\nTime from diagnosis to first chemotherapy\nTime from diagnosis to first surgery\nNeo-adjuvant SACT Regime received\nType of surgery\n\n\n\n",
-      "last_modified": "2023-02-20T23:53:07+00:00"
-    },
-    {
-      "path": "index.html",
-      "title": "CRUK Scotland Meta Data Catalogue",
-      "description": "Meta Data Catalogue derived from Scottish Cancer Datasets.\n",
+      "description": "Some additional details about the website\n",
       "author": [
         {
           "name": "Peter Hall",
@@ -93,15 +23,85 @@
         }
       ],
       "date": "`r Sys.Date()`",
+      "contents": "\n\n\n\n",
+      "last_modified": "2023-02-21T09:20:48+00:00"
+    },
+    {
+      "path": "breastCancer.html",
+      "title": "Breast Cancer",
+      "description": "For analysts who are familiar with routinely collected national NHS data and provides a data dictionary, data quality and summary of methods for defining cohorts, characteristics and outcomes of breast cancer patients.\n",
+      "author": [],
+      "contents": "\n\nContents\nEarly Breast Cancer\nAdvanced Breast Cancer\n\nEarly Breast Cancer\nAdvanced Breast Cancer\n\n\n\n",
+      "last_modified": "2023-02-21T09:20:48+00:00"
+    },
+    {
+      "path": "dashboard.html",
+      "title": "&#32;",
+      "author": [],
+      "contents": "\n\n\n\n\n\n\n\n\n\n",
+      "last_modified": "2023-02-21T09:20:48+00:00"
+    },
+    {
+      "path": "datasets.html",
+      "title": "Datasets",
+      "description": "Description of routinely collected national NHS datasets used for analysts defining cancer cohorts.\n",
+      "author": [],
+      "contents": "\n\nContents\nSMR01\nSMR06\nData Quirks\nICDO Codes\nDiagnosis on the same day\nNon Lothian Residents\n\n\nOncology Database\nCHI Files\nChemocare (SACT)\nSCAN Audit\nPrescribing Information System (PIS)\n\nSMR01\nhttp://www.ndc.scot.nhs.uk/Data-Dictionary/SMR-Datasets//SMR01-General-Acute-Inpatient-and-Day-Case/\nA SMR01 is generated for patients receiving care in the General/ Acute specialties when the following events occur:\nInpatients and day cases are admitted to NHS hospitals from locations external to the NHS.\nInpatients and day cases are admitted to contracted NHS beds in non-NHS institutions.\nInpatients and day cases change specialty (with or without a change of consultant) when:\nAn Inpatient transfers to become an Inpatient in another specialty in the same hospital.\nAn inpatient becomes a Day Case in another specialty during the inpatient stay.\nA day case transfers to become an Inpatient in another specialty (except when the day case episode is during an\ninpatient stay and the patient is transferring back to the original consultant).\nA day case transfers back to resume an Inpatient stay but does NOT transfer back to the original consultant for\nmedical reasons.\nInpatients and day cases transfer from another NHS hospital (including contracted NHS beds in non-NHS institutions).\nInpatients and day cases change consultant for medical reasons within the same specialty when:\nAn inpatient transfers as an Inpatient to the care of a different consultant for medical reasons in the same\nspecialty in the same hospital.\nAn inpatient becomes a Day Case in the same specialty under a different consultant for medical reasons during\nthe inpatient stay.\nA day case transfers to become an Inpatient under the care of a different consultant in the same specialty\nfor medical reasons (except when the day case episode is during an inpatient stay and the patient is transferring\nback to the original consultant).\nA day case transfers back to resume an Inpatient stay in the same specialty but does NOT transfer back to the\noriginal consultant for medical reasons.\nInpatients move into and/or out of one of the valid significant facilities.\nInpatients return to hospital having been on pass for more than 5 days.\n\n\nSMR06\nhttp://www.isdscotland.org/Health-Topics/Cancer/Scottish-Cancer-Registry/\nSMR06 is derived from SOCRATES.\nCancer Registration is the collection, maintenance and management of data on every new diagnosis of cancer occurring in a population. In Scotland, approximately 55,000 cancer registrations are made annually. The Scottish Cancer Registry database holds over 1,800,000 records dating back to 1958, when the registry began.\nCancer registries are unique in being able to provide historical trend and population-based data to monitor changes in cancer incidence and survival over long periods of time. Cancer registries across the world share the same main objective: to deliver timely, comparable and high-quality cancer data.\nThe Scottish Cancer Registry contains information on all new cases of cancer including primary malignant neoplasms, carcinoma in situ, neoplasms of uncertain behaviour and benign brain and spinal cord tumours.\nThe data is in flat .dat file format and a file layout is needed in order to determine the location of each variable. Please note that the file layout can change over time so ensure that the correct file layout version is used.\nData Quirks\nICDO Codes\nInternational classification of diseases for oncology (ICD-O) codes are recorded in SMR06 with codes for both morphology and site.\nTumour type indicates the morphology (histology) of the tumour and comprises of the first four digits of the ICD-O morphology code and a fifth digit which denotes the behaviour of the tumour.\n\n\nTable 1: \n\n\nCode\n\n\nDescription\n\n\n0\n\n\nBenign\n\n\n1\n\n\nUncertain whether benign or malignant\n\n\n2\n\n\nCarcinoma in situ\n\n\n3\n\n\nMalignant - primary site\n\n\n6\n\n\nMalignant - metastatic site or secondary site\n\n\n9\n\n\nMalignant - uncertain whether primary or metastatic site\n\n\nDiagnosis on the same day\nIt is possible for patients to be diagnosed with multiple primary tumours on the same day; this must be accounted for when looking at patient history as these tumours can potentially be flagged as tumour history.\nNon Lothian Residents\nOn average 36% of patients in SMR06 each year are non-Lothian residents. These patients have been removed from the analysis as the data for their full history lies with the health board of residence which at the moment there is no access to.\nTo see a breakdown by treatment type please see the summary table.\nFor access please contact Analytical Services or NHS Lothian Research Safe Haven\nOncology Database\nCHI Files\nChemocare (SACT)\nSCAN Audit\nPrescribing Information System (PIS)\n\n\n\n",
+      "last_modified": "2023-02-21T09:20:50+00:00"
+    },
+    {
+      "path": "example_1.html",
+      "title": "ER & HER2 status",
+      "description": "Deriving ER & HER2 receptor status from routine data: Analyst's Guide\n",
+      "author": [
+        {
+          "name": "Maria McMenemy",
+          "url": {}
+        }
+      ],
+      "contents": "\nWorked example in R to derive the data and uses data from the following data sources:\nSMR06 - The Cancer Registry\nSESCD\nChemocare\nChemotherapy from the SESCD\nSCAN Audit\nThe report includes a method on how to derive ER and HER2 receptor status and an analysis of the accuracy of the imputation.\n\n\n\n",
+      "last_modified": "2023-02-21T09:20:50+00:00"
+    },
+    {
+      "path": "example_2.html",
+      "title": "ER & HER2 status in SBC",
+      "description": "Describing treatment sequences in ER+ HER2- secondary breast cancer patients: Analyst's Guide\n",
+      "author": [
+        {
+          "name": "Maria McMenemy",
+          "url": {}
+        }
+      ],
+      "contents": "\nThis report contains the R code used to derive the data and uses data from the following data sources:\nSecondary Breast Cancer CNS Database\nSouth East Scotland Cancer Database (SESCD) - Access database, although this is to be moved to an SQL server\nMain Table\nHormone Table\n\nChemocare\nPrescribing Information System (PIS)\ne-Prescribed data\n\nFulvestrant Audit data\nNRS Deaths data\nTreatment sequence is derived in an aggregated as well as a more granular format and results are displayed in interactive Sankey and Decision Tree plots.\n\n\n\n",
+      "last_modified": "2023-02-21T09:20:50+00:00"
+    },
+    {
+      "path": "example_3.html",
+      "title": "SACT in eBC",
+      "description": "Neo-adjuvant SACT in Early HER2+ Breast Cancer Patients:  Analyst's Guide\n",
+      "author": [
+        {
+          "name": "Maria McMenemy",
+          "url": {}
+        }
+      ],
+      "contents": "\nThis report contains the R code used to derive the data and uses data from the following data sources:\nSMR06\nChemocare\nSMR01\nSecondary Breast Cancer CNS Database\nThe following patient characteristics were derived and summarised:\nAge\nSex\nEthnicity\nTNM Staging\nHormone Receptor status\nTime from diagnosis to first chemotherapy\nTime from diagnosis to first surgery\nNeo-adjuvant SACT Regime received\nType of surgery\n\n\n\n",
+      "last_modified": "2023-02-21T09:20:51+00:00"
+    },
+    {
+      "path": "index.html",
+      "title": "CRUK Scotland Meta Data Catalogue",
+      "description": "Meta Data Catalogue derived from Scottish Cancer Datasets.\n",
+      "author": [],
       "contents": "\nhttps://www.crukscotlandcentre.ac.uk/research/data-team\nWe will capitalize on the excellent clinical data in Scotland by making it available to all six tumour themes with an aspiration to set up mechanisms to provide data to researchers in other cancer types. Our data allows rich clinical phenotyping, clinical pathway analysis and outcome measurement spanning the whole cancer journey from screening and diagnosis to treatment, survivorship and end of life care. Clinical annotation is inherent as a complement to molecular data and research datasets. Clinical, and any accompanying molecular, data fundamentally underlying aspects of the Centre’s work by allowing a stratified approach; by prior risk of disease or cancer subtype, for example, allowing the identification of high-risk patients for optimisation of screening, surveillance, investigation and treatment. Mechanistic insights into disease will be generated from pre-clinical in vitro/in vivo model systems that can provide a detailed understanding of disease aetiology. The data theme will also support the generation and integrated analysis of pre-clinical and patient-derived multiomics datasets, leading to mechanistic insights and target identification. Data is also essential for evaluating the clinical value and health service impact of new technologies and medicines emerging from our research programme; and for the identification of patients for translational research and clinical trials.\n\n\n\n",
-      "last_modified": "2023-02-20T23:53:07+00:00"
+      "last_modified": "2023-02-21T09:20:51+00:00"
     },
     {
       "path": "methods.html",
       "title": "Methods guidance",
       "author": [],
       "contents": "\n\nContents\nCode & Codelists\nComorbidity\nDeprivation\n\nCode & Codelists\nComorbidity\nDeprivation\n\n\n\n",
-      "last_modified": "2023-02-20T23:53:08+00:00"
+      "last_modified": "2023-02-21T09:20:51+00:00"
     }
   ],
   "collections": []

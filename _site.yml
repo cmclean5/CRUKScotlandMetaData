@@ -1,7 +1,7 @@
 name: "webSite"
-title: "CRUK Scotland MetaData"
+title: "CRUK Scotland"
 description: |
-  My Website
+  MetaData Catalogue
 output_dir: "docs"
 navbar:
   search: true
