@@ -17,6 +17,8 @@ navbar:
       menu: 
         - text: "Breast"
           href: breastCancer.html
+        - text: "Colorectal"
+          href: colorectalCancer.html
     - text: "Examples"
       menu: 
         - text: "ER & HER2 status"
@@ -38,7 +40,7 @@ output:
     toc_float: yes
     toc_depth: 3
     self_contained: false
-    css: ["css/styles.css"]
+    css: ["css/styles.css","css/accordion.css"]
     include:
       after_body: _footer.html
 #runtime: shiny

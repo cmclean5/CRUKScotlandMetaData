@@ -1,0 +1,39 @@
+---
+title: "Colorectal Cancer"
+description: |
+  For analysts who are familiar with routinely collected national NHS data and provides a data dictionary, data quality and summary of methods for defining cohorts, characteristics and outcomes of colorectal cancer patients.
+output: 
+  distill::distill_article:
+    css: ["css/styles.css","css/accordion.css"]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Introduction
+:::{ .boxy .boxy-myinfo }
+There are a large number  of databases containing information that can potentially be used to improve the care of individuals with, or at risk of, colorectal cancer. The [Bowel Cancer Intelligence programme](https://bci.leeds.ac.uk/) is creating the Colorectal Repository (CORECT-R) for research purposes. At present, CORECT-R contains mainly English data sets. However, it is hoped that going forward, Scottish data will be added. In the meantime, the CORECT-R Scotland project is hosting a Scottish data extract within the National Safe Haven that contains information on colorectal cancer-diagnosed patients (PBPP project number: 1718-0026). In short, the Scottish CORECT-R brings together cancer registry data with other routinely collected data, including detailed chemotherapy prescribing data, which has not historically been linked at a national level. For further information on the Scottish CORECT-R project, including details on the PBPP application and research questions, please visit the [Edinburgh Health Economics](https://blogs.ed.ac.uk/ectu_ehe/research/bciuk/) site.
+
+The datasets that are currently included in the Scottish CORECT-R are described below: 
+:::
+
+# Demographics
+
+Several pieces of demographic information is also available for patients in the CORECT-R Scotland. 
+
+# National Records of Scotland Deaths
+
+# Scottish Morbidity Records
+
+# National Cancer Audit (QPI)
+
+# Chemocase (SACT)
+
+# Prescribing Information System (PIS)
+
+# Patient Level Costs
+
+# Critial Care
+
+# Unscheduled Care

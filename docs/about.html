@@ -94,8 +94,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--  https://schema.org/Article -->
-  <meta property="article:published" itemprop="datePublished" content="2023-02-21"/>
-  <meta property="article:created" itemprop="dateCreated" content="2023-02-21"/>
+  <meta property="article:published" itemprop="datePublished" content="2023-02-23"/>
+  <meta property="article:created" itemprop="dateCreated" content="2023-02-23"/>
   <meta name="article:author" content="Peter Hall"/>
   <meta name="article:author" content="Mah&amp;eacute;va Vallet"/>
   <meta name="article:author" content="Giovanni Tramonti"/>
@@ -117,7 +117,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date"]}},"value":[{"type":"character","attributes":{},"value":["About this site"]},{"type":"character","attributes":{},"value":["Some additional details about the website\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Peter Hall"]},{"type":"character","attributes":{},"value":["https://www.ed.ac.uk/profile/peter-hall"]},{"type":"character","attributes":{},"value":["Edinburgh Cancer Research Centre, University of Edinburgh"]},{"type":"character","attributes":{},"value":["https://www.ed.ac.uk/cancer-centre"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Mah&eacute;va Vallet"]},{"type":"character","attributes":{},"value":["https://www.ed.ac.uk/profile/maheva-vallet"]},{"type":"character","attributes":{},"value":["Edinburgh Cancer Research Centre, University of Edinburgh"]},{"type":"character","attributes":{},"value":["https://www.ed.ac.uk/cancer-centre"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Giovanni Tramonti"]},{"type":"NULL"},{"type":"character","attributes":{},"value":["Edinburgh Cancer Research Centre, University of Edinburgh"]},{"type":"character","attributes":{},"value":["https://www.ed.ac.uk/cancer-centre"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Maria McMenemy"]}]}]},{"type":"character","attributes":{},"value":["2023-02-21"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date"]}},"value":[{"type":"character","attributes":{},"value":["About this site"]},{"type":"character","attributes":{},"value":["Some additional details about the website\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Peter Hall"]},{"type":"character","attributes":{},"value":["https://www.ed.ac.uk/profile/peter-hall"]},{"type":"character","attributes":{},"value":["Edinburgh Cancer Research Centre, University of Edinburgh"]},{"type":"character","attributes":{},"value":["https://www.ed.ac.uk/cancer-centre"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Mah&eacute;va Vallet"]},{"type":"character","attributes":{},"value":["https://www.ed.ac.uk/profile/maheva-vallet"]},{"type":"character","attributes":{},"value":["Edinburgh Cancer Research Centre, University of Edinburgh"]},{"type":"character","attributes":{},"value":["https://www.ed.ac.uk/cancer-centre"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Giovanni Tramonti"]},{"type":"NULL"},{"type":"character","attributes":{},"value":["Edinburgh Cancer Research Centre, University of Edinburgh"]},{"type":"character","attributes":{},"value":["https://www.ed.ac.uk/cancer-centre"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Maria McMenemy"]}]}]},{"type":"character","attributes":{},"value":["2023-02-23"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2104,7 +2104,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   }
 
   h2 {
-  color: rgb(0,125,179);
+  color: rgb(0,71,133);
   }
 
   h3 {
@@ -2125,44 +2125,154 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   a:hover { color: #50a0b0; /* darker color when hovering */ }
 
-  div.dashboard {
-    max-width: 100% !important;
-    max-height: 100% !important;
+  /*-------------------------------------------*/
+  /* BOXY                                      */
+  /*-------------------------------------------*/
+
+  :root {
+      --color-primary: #4C979F;
+      --color-border: #ccc;
+      --color-text: #424949;
+      --color-code-bg: #f4f6f6;
+      --color-code-inline: #5d6d7e;
+      --color-boxy-bg: #fbfcfc;
+      --color-shadow: #E0E0E0;
+      --color-optional: #bf6300;
+      --font-base: 'Source Sans Pro';
+      --font-highlight: 'Source Sans Pro';
+      --font-code: 'Ubuntu Mono';
   }
 
-  div.dashboard iframe {
-    display: block;
+  after, :before {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+  }
+
+  .boxy {
+      /* border: 1px solid var(--color-primary); */
+      background-color: var(--color-boxy-bg);
+      border: 1px solid var(--color-border);
+      border-left: 6px solid var(--color-border);
+      border-radius: 0px 4px 4px 0px;
+      padding: 10px 10px 0px 10px;
+      margin: 10px 0px 10px 0px;
+      position: relative;
+  }
+
+  .boxy-primary {
+      color: #3c787f;
+      background-color: #edf4f5;
+      border-color: #c9dfe2;
+      border-left-color: #3c787f;
+  }
+
+  .boxy-myinfo {
+    color: rgb(0,71,133);
+    background-color: #edf4f5;
+    border-color: rgb(64,177,204);
+    border-left-color: rgb(0,71,133);
+  }
+
+  .boxy-primary::before {
+      background-color: #3c787f !important;
+  }
+
+  .boxy-orange::before {
+      background-color: #bf6300 !important;
+  }
+
+  .boxy-success::before {
+      background-color: #3c763d !important;
+  }
+
+  .boxy-warning::before {
+      background-color: #8a6d3b !important;
+  }
+
+  .boxy-danger::before {
+      background-color: #a94442 !important;
+  }
+
+  .boxy-info::before {
+      background-color: #31708f !important;
+  }
+
+  /*-------------------------------------------*/
+  /* END                                       */
+  /*-------------------------------------------*/
+
+  /*-------------------------------------------*/
+  /* ACCORDION                                 */
+  /*-------------------------------------------*/
+
+  /* Distill navbar background color #0F2E3D*/
+  .accordion {
+    background-color: rgb(0,71,133); /* #0F2E3D*/
+    color: rgb(222,235,247);
+    cursor: arrow;
+    padding: 18px;
     width: 100%;
-    height: 100%;
     border: none;
+    text-align: left;
+    outline: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.4s;
+    margin-bottom: 30px;
+  }
+
+  .active, .accordion:hover {
+    background-color: rgb(79,129,189);
+  }
+
+  .accordion:after {
+    content: '\002B'; 
+    color: rgb(222,235,247);
+    font-weight: bold;
+    float: right;
+    margin-left: 7px;
+  }
+
+  .active:after {
+    content: "\2212";  
   }
 
   /*
-  <style>
-  .dashboard {
-    max-width: 1800px !important;
-    max-height: 1800px !important;
-    margin-left: auto;
-    margin-right: auto;
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    font-size: 18px;
+  }
+  */
+  .panel {
+      /* border: 1px solid var(--color-primary); */
+      background-color: var(--color-boxy-bg);
+      /*border: 1px solid var(--color-border);*/
+      border-left: 6px solid var(--color-border);
+      border-radius: 0px 4px 4px 0px;
+      padding: 0 18px;
+      /*padding: 10px 10px 0px 10px;*/
+      margin: 10px 0px 10px 0px;
+      /*position: relative;*/
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
   }
 
-  <style>
-  .dashboard iframe {
-    width: 100% !important;
-    height: 100% !important;
-    border: none;
-  }
-  </style>
-  */
+
+  /*-------------------------------------------*/
+  /* END                                       */
+  /*-------------------------------------------*/
+
   </style>
   <!--/radix_placeholder_site_in_header-->
 
   <link rel="stylesheet" href="css/styles.css" type="text/css"/>
+  <link rel="stylesheet" href="css/accordion.css" type="text/css"/>
 
 </head>
 
@@ -2171,7 +2281,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"About this site","description":"Some additional details about the website","authors":[{"author":"Peter Hall","authorURL":"https://www.ed.ac.uk/profile/peter-hall","affiliation":"Edinburgh Cancer Research Centre, University of Edinburgh","affiliationURL":"https://www.ed.ac.uk/cancer-centre","orcidID":""},{"author":"Mah&eacute;va Vallet","authorURL":"https://www.ed.ac.uk/profile/maheva-vallet","affiliation":"Edinburgh Cancer Research Centre, University of Edinburgh","affiliationURL":"https://www.ed.ac.uk/cancer-centre","orcidID":""},{"author":"Giovanni Tramonti","authorURL":"#","affiliation":"Edinburgh Cancer Research Centre, University of Edinburgh","affiliationURL":"https://www.ed.ac.uk/cancer-centre","orcidID":""},{"author":"Maria McMenemy","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2023-02-21T00:00:00.000+00:00","citationText":"Hall, et al., 2023"}
+{"title":"About this site","description":"Some additional details about the website","authors":[{"author":"Peter Hall","authorURL":"https://www.ed.ac.uk/profile/peter-hall","affiliation":"Edinburgh Cancer Research Centre, University of Edinburgh","affiliationURL":"https://www.ed.ac.uk/cancer-centre","orcidID":""},{"author":"Mah&eacute;va Vallet","authorURL":"https://www.ed.ac.uk/profile/maheva-vallet","affiliation":"Edinburgh Cancer Research Centre, University of Edinburgh","affiliationURL":"https://www.ed.ac.uk/cancer-centre","orcidID":""},{"author":"Giovanni Tramonti","authorURL":"#","affiliation":"Edinburgh Cancer Research Centre, University of Edinburgh","affiliationURL":"https://www.ed.ac.uk/cancer-centre","orcidID":""},{"author":"Maria McMenemy","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2023-02-23T00:00:00.000+00:00","citationText":"Hall, et al., 2023"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2196,6 +2306,7 @@ Cancers
 </button>
 <div class="nav-dropdown-content">
 <a href="breastCancer.html">Breast</a>
+<a href="colorectalCancer.html">Colorectal</a>
 </div>
 </div>
 <div class="nav-dropdown">
@@ -2239,7 +2350,7 @@ Examples
   
 ,   Maria McMenemy  
   
-<br/>2023-02-21
+<br/>2023-02-23
 </div>
 
 <div class="d-article">

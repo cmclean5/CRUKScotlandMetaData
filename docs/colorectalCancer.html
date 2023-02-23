@@ -88,30 +88,29 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>CRUK Scotland: SACT in eBC</title>
+  <title>CRUK Scotland: Colorectal Cancer</title>
 
-  <meta property="description" itemprop="description" content="Neo-adjuvant SACT in Early HER2+ Breast Cancer Patients:  Analyst&#39;s Guide"/>
+  <meta property="description" itemprop="description" content="For analysts who are familiar with routinely collected national NHS data and provides a data dictionary, data quality and summary of methods for defining cohorts, characteristics and outcomes of colorectal cancer patients."/>
 
 
-  <meta name="article:author" content="Maria McMenemy"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="CRUK Scotland: SACT in eBC"/>
+  <meta property="og:title" content="CRUK Scotland: Colorectal Cancer"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="Neo-adjuvant SACT in Early HER2+ Breast Cancer Patients:  Analyst&#39;s Guide"/>
+  <meta property="og:description" content="For analysts who are familiar with routinely collected national NHS data and provides a data dictionary, data quality and summary of methods for defining cohorts, characteristics and outcomes of colorectal cancer patients."/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="CRUK Scotland"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="CRUK Scotland: SACT in eBC"/>
-  <meta property="twitter:description" content="Neo-adjuvant SACT in Early HER2+ Breast Cancer Patients:  Analyst&#39;s Guide"/>
+  <meta property="twitter:title" content="CRUK Scotland: Colorectal Cancer"/>
+  <meta property="twitter:description" content="For analysts who are familiar with routinely collected national NHS data and provides a data dictionary, data quality and summary of methods for defining cohorts, characteristics and outcomes of colorectal cancer patients."/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","output"]}},"value":[{"type":"character","attributes":{},"value":["SACT in eBC"]},{"type":"character","attributes":{},"value":["Neo-adjuvant SACT in Early HER2+ Breast Cancer Patients:  Analyst's Guide\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Maria McMenemy"]}]}]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","output"]}},"value":[{"type":"character","attributes":{},"value":["Colorectal Cancer"]},{"type":"character","attributes":{},"value":["For analysts who are familiar with routinely collected national NHS data and provides a data dictionary, data quality and summary of methods for defining cohorts, characteristics and outcomes of colorectal cancer patients.\n"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["css"]}},"value":[{"type":"character","attributes":{},"value":["css/styles.css","css/accordion.css"]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2275,7 +2274,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"SACT in eBC","description":"Neo-adjuvant SACT in Early HER2+ Breast Cancer Patients:  Analyst's Guide","authors":[{"author":"Maria McMenemy","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}]}
+{"title":"Colorectal Cancer","description":"For analysts who are familiar with routinely collected national NHS data and provides a data dictionary, data quality and summary of methods for defining cohorts, characteristics and outcomes of colorectal cancer patients.","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2329,39 +2328,46 @@ Examples
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>SACT in eBC</h1>
+<h1>Colorectal Cancer</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>Neo-adjuvant SACT in Early HER2+ Breast Cancer Patients: Analyst’s Guide</p></p>
+<p><p>For analysts who are familiar with routinely collected national NHS data and provides a data dictionary, data quality and summary of methods for defining cohorts, characteristics and outcomes of colorectal cancer patients.</p></p>
 </div>
 
-<div class="d-byline">
-  Maria McMenemy  
-  
-
-</div>
 
 <div class="d-article">
-<p>This report contains the R code used to derive the data and uses data from the following data sources:</p>
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
 <ul>
-<li>SMR06</li>
-<li>Chemocare</li>
-<li>SMR01</li>
-<li>Secondary Breast Cancer CNS Database</li>
+<li><a href="#introduction" id="toc-introduction">Introduction</a></li>
+<li><a href="#demographics" id="toc-demographics">Demographics</a></li>
+<li><a href="#national-records-of-scotland-deaths" id="toc-national-records-of-scotland-deaths">National Records of Scotland Deaths</a></li>
+<li><a href="#scottish-morbidity-records" id="toc-scottish-morbidity-records">Scottish Morbidity Records</a></li>
+<li><a href="#national-cancer-audit-qpi" id="toc-national-cancer-audit-qpi">National Cancer Audit (QPI)</a></li>
+<li><a href="#chemocase-sact" id="toc-chemocase-sact">Chemocase (SACT)</a></li>
+<li><a href="#prescribing-information-system-pis" id="toc-prescribing-information-system-pis">Prescribing Information System (PIS)</a></li>
+<li><a href="#patient-level-costs" id="toc-patient-level-costs">Patient Level Costs</a></li>
+<li><a href="#critial-care" id="toc-critial-care">Critial Care</a></li>
+<li><a href="#unscheduled-care" id="toc-unscheduled-care">Unscheduled Care</a></li>
 </ul>
-<p>The following patient characteristics were derived and summarised:</p>
-<ul>
-<li>Age</li>
-<li>Sex</li>
-<li>Ethnicity</li>
-<li>TNM Staging</li>
-<li>Hormone Receptor status</li>
-<li>Time from diagnosis to first chemotherapy</li>
-<li>Time from diagnosis to first surgery</li>
-<li>Neo-adjuvant SACT Regime received</li>
-<li>Type of surgery<br />
-</li>
-</ul>
+</nav>
+</div>
+<h1 id="introduction">Introduction</h1>
+<div class="boxy boxy-myinfo">
+<p>There are a large number of databases containing information that can potentially be used to improve the care of individuals with, or at risk of, colorectal cancer. The <a href="https://bci.leeds.ac.uk/">Bowel Cancer Intelligence programme</a> is creating the Colorectal Repository (CORECT-R) for research purposes. At present, CORECT-R contains mainly English data sets. However, it is hoped that going forward, Scottish data will be added. In the meantime, the CORECT-R Scotland project is hosting a Scottish data extract within the National Safe Haven that contains information on colorectal cancer-diagnosed patients (PBPP project number: 1718-0026). In short, the Scottish CORECT-R brings together cancer registry data with other routinely collected data, including detailed chemotherapy prescribing data, which has not historically been linked at a national level. For further information on the Scottish CORECT-R project, including details on the PBPP application and research questions, please visit the <a href="https://blogs.ed.ac.uk/ectu_ehe/research/bciuk/">Edinburgh Health Economics</a> site.</p>
+<p>The datasets that are currently included in the Scottish CORECT-R are described below:</p>
+</div>
+<h1 id="demographics">Demographics</h1>
+<p>Several pieces of demographic information is also available for patients in the CORECT-R Scotland.</p>
+<h1 id="national-records-of-scotland-deaths">National Records of Scotland Deaths</h1>
+<h1 id="scottish-morbidity-records">Scottish Morbidity Records</h1>
+<h1 id="national-cancer-audit-qpi">National Cancer Audit (QPI)</h1>
+<h1 id="chemocase-sact">Chemocase (SACT)</h1>
+<h1 id="prescribing-information-system-pis">Prescribing Information System (PIS)</h1>
+<h1 id="patient-level-costs">Patient Level Costs</h1>
+<h1 id="critial-care">Critial Care</h1>
+<h1 id="unscheduled-care">Unscheduled Care</h1>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
