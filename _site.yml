@@ -38,6 +38,7 @@ output:
     toc_float: yes
     toc_depth: 3
     self_contained: false
-    css: css/styles.css
+    css: ["css/styles.css"]
     include:
       after_body: _footer.html
+#runtime: shiny

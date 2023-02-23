@@ -1,0 +1,64 @@
+---
+title: "Untitled"
+output: html_document
+date: "2023-02-21"
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This R Markdown document is made interactive using Shiny. Unlike the more traditional workflow of creating static reports, you can now create documents that allow your readers to change the assumptions underlying your analysis and see the results immediately. 
+
+To learn more, see [Interactive Documents](http://rmarkdown.rstudio.com/authoring_shiny.html).
+
+## Inputs and Outputs
+
+You can embed Shiny inputs and outputs in your document. Outputs are automatically updated whenever inputs change.  This demonstrates how a standard R plot can be made interactive by wrapping it in the Shiny `renderPlot` function. The `selectInput` and `sliderInput` functions create the input widgets used to drive the plot.
+
+```{r, echo=FALSE}
+library(shiny)
+library(shinyBS)
+
+shinyApp(
+ ui =
+ fluidPage(
+   sidebarLayout(
+     sidebarPanel(HTML("This button will open Panel 1 using updateCollapse."),
+                  actionButton("p1Button", "Push Me!"),
+                  selectInput("styleSelect", "Select style for Panel 1",
+                   c("default", "primary", "danger", "warning", "info", "success"))
+     ),
+     mainPanel(
+       bsCollapse(id = "collapseExample", open = "Panel 2",
+                  bsCollapsePanel("Panel 1", "This is a panel with just text ",
+                   "and has the default style. You can change the style in ",
+                   "the sidebar.", style = "info"),
+                  bsCollapsePanel("Panel 2", "This panel has a generic plot. ",
+                   "and a 'success' style.", plotOutput("genericPlot"), style = "success")
+       )
+     )
+   )
+ ),
+ server =
+ function(input, output, session) {
+   output$genericPlot <- renderPlot(plot(rnorm(100)))
+   observeEvent(input$p1Button, ({
+     updateCollapse(session, "collapseExample", open = "Panel 1")
+   }))
+   observeEvent(input$styleSelect, ({
+     updateCollapse(session, "collapseExample", style = list("Panel 1" = input$styleSelect))
+   }))
+ }
+)
+```
+
+Note the use of the `height` parameter to determine how much vertical space the embedded application should occupy.
+
+You can also use the `shinyApp` function to define an application inline rather then in an external directory.
+
+In all of R code chunks above the `echo = FALSE` attribute is used. This is to prevent the R code within the chunk from rendering in the document alongside the Shiny components.
+
+
+

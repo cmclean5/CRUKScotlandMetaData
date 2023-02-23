@@ -48,13 +48,13 @@ knitr::include_url("static/docs/index.html", height=800)
 
 <!--
 ```{r show.dashboard2, layout="l-screen-inset", out.height=1000, echo=FALSE}
-htmltools::tags$iframe(src = "static/docs/index.html",
-    scrolling = "no",
-    frameBordder = "0",
-    height="100%",
-    width="100%"
-    ##data-external="1"
-  )
+#htmltools::tags$iframe(src = "static/docs/index.html",
+#    scrolling = "no",
+#    frameBordder = "0",
+#    height=800,
+#    width="100%"
+#    `data-external`="1"
+#  )
 ```
 -->
 

@@ -6,10 +6,7 @@ output:
   distill::distill_article:
     code_folding: false
     sef_contained: false
-    css: ["css/styles.css","css/accordion.css"]
-    includes:
-      in_header:  "js/header.html"
-      after_body: "js/after_body.html"
+    ##css: css/styles.css
 #runtime: shiny
 ---
 
@@ -18,24 +15,59 @@ knitr::opts_chunk$set(cache=FALSE, echo=FALSE)
 options(kable.auto_format=FALSE)
 source("Scripts/Setup.R", local=knitr::knit_global())
 
-## set hook 
-knitr::knit_hooks$set(class = function(before, options, envir) {
+##library(bsplus)
+
+## set hook for dealing with large images in html
+knitr::knit_hooks$set(name = function(before, options, envir) {
   if(before){
-    sprintf("<button class=\"accordion\"> %s", options$class)
+    sprintf("<button class=\"accordion\">%s</button><div class=\"panel\"><p>", options$name)
   }else{
-    "</button>"
+    "</p></div>"
   }
 })
 ```
 
-<button class="accordion"> SMRO1 </button>
-:::{ .panel}
+<!--
+```{r, name="test"}
+"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+```
+-->
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+<div class="boxy boxy-primary">
+# SMR01 
+
  http://www.ndc.scot.nhs.uk/Data-Dictionary/SMR-Datasets//SMR01-General-Acute-Inpatient-and-Day-Case/
 
 A SMR01 is generated for patients receiving care in the General/ Acute specialties when the following events occur:
 
+</div>
+
 1. Inpatients and day cases are admitted to NHS hospitals from locations external to the NHS.
+
 2. Inpatients and day cases are admitted to contracted NHS beds in non-NHS institutions.
+
 3. Inpatients and day cases change specialty (with or without a change of consultant) when:
     a. An Inpatient transfers to become an Inpatient in another specialty in the same hospital.
     b. An inpatient becomes a Day Case in another specialty during the inpatient stay.
@@ -43,25 +75,21 @@ A SMR01 is generated for patients receiving care in the General/ Acute specialti
    inpatient stay and the patient is transferring back to the original consultant).
     d. A day case transfers back to resume an Inpatient stay but does NOT transfer back to the original consultant for 
    medical reasons.
-    e. Inpatients and day cases transfer from another NHS hospital (including contracted NHS beds in non-NHS 
-    institutions).
+    e. Inpatients and day cases transfer from another NHS hospital (including contracted NHS beds in non-NHS institutions).
     f. Inpatients and day cases change consultant for medical reasons within the same specialty when:
         i. An inpatient transfers as an Inpatient to the care of a different consultant for medical reasons in the same
         specialty in the same hospital.
-        ii. An inpatient becomes a Day Case in the same specialty under a different consultant for medical reasons 
-        during the inpatient stay.
+        ii. An inpatient becomes a Day Case in the same specialty under a different consultant for medical reasons during
+        the inpatient stay.
         iii. A day case transfers to become an Inpatient under the care of a different consultant in the same specialty
-        for medical reasons (except when the day case episode is during an inpatient stay and the patient is 
-        transferring back to the original consultant).
-        iv. A day case transfers back to resume an Inpatient stay in the same specialty but does NOT transfer back to 
-        the original consultant for medical reasons.
+        for medical reasons (except when the day case episode is during an inpatient stay and the patient is transferring
+        back to the original consultant).
+        iv. A day case transfers back to resume an Inpatient stay in the same specialty but does NOT transfer back to the
+        original consultant for medical reasons.
         v. Inpatients move into and/or out of one of the valid significant facilities.
         vi. Inpatients return to hospital having been on pass for more than 5 days.
-:::
 
-
-<button class="accordion"> SMRO6 </button>
-:::{ .panel}
+# SMR06
 
 http://www.isdscotland.org/Health-Topics/Cancer/Scottish-Cancer-Registry/
 
@@ -103,29 +131,13 @@ On average 36% of patients in SMR06 each year are non-Lothian residents. These p
 To see a breakdown by treatment type please see the summary table.
 
 For access please contact Analytical Services or NHS Lothian Research Safe Haven
-:::
 
-<button class="accordion"> Oncology Database </button>
-:::{ .panel}
-Add Text
-:::
+# Oncology Database
 
-<button class="accordion"> CHI files  </button>
-:::{ .panel}
-Add Text
-:::
+# CHI Files
 
-<button class="accordion"> Chemocase (SACT)  </button>
-:::{ .panel}
-Add Text
-:::
+# Chemocare (SACT)
 
-<button class="accordion"> SCAN Audit  </button>
-:::{ .panel}
-Add Text
-:::
+# SCAN Audit
 
-<button class="accordion"> Prescribing Information System (PIS) </button>
-:::{ .panel}
-Add Text
-:::
+# Prescribing Information System (PIS)

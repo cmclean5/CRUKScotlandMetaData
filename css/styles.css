@@ -10,7 +10,7 @@ color: rgb(0,71,133);
 }
 
 h2 {
-color: rgb(0,125,179);
+color: rgb(0,71,133);
 }
 
 h3 {
@@ -30,38 +30,3 @@ border-color: rgb(31,72,124);
 a { color: #5ebccf; }
 
 a:hover { color: #50a0b0; /* darker color when hovering */ }
-
-div.dashboard {
-  max-width: 100% !important;
-  max-height: 100% !important;
-}
-
-div.dashboard iframe {
-  display: block;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-/*
-<style>
-.dashboard {
-  max-width: 1800px !important;
-  max-height: 1800px !important;
-  margin-left: auto;
-  margin-right: auto;
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-}
-
-<style>
-.dashboard iframe {
-  width: 100% !important;
-  height: 100% !important;
-  border: none;
-}
-</style>
-*/
