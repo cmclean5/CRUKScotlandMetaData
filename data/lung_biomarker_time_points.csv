@@ -1,0 +1,14 @@
+Time Point	Reference Date	Time Limits
+Diagnosis	diag_date_1	within 28 days 
+Pre-surgery	date_of_1st_surgical_treatment or date_of_first_radical_surgery(06)	within 28 days prior
+Post-surgery (1)	date_of_1st_surgical_treatment or date_of_first_radical_surgery(06) + 6 months	within 42 days 
+Post-surgery (2)	date_of_1st_surgical_treatment or date_of_first_radical_surgery(06) + 12 months	within 42 days 
+Pre-radiotherapy	rsrtdate	within 28 days prior
+Post-radiotherapy (1)	rcompdate	within 28 days post
+Post-radiotherapy (2)	rsrtdate + 6 months	within 42 days 
+Post-radiotherapy (3)	rsrtdate + 12 months	within 42 days 
+Pre-adjuvant durvalumab	durvdat	within 28 days prior
+On treated durvalumab	durvdat + 6 months	within 28 days
+End of adjuvant durvalumab	durvendate	within 28 days
+Progression	pd_date	within 28 days
+Death	dod	within 28 days
