@@ -43,12 +43,12 @@ knitr::knit_hooks$set(class = function(before, options, envir) {
 </div>-->
 
 ```{r show.dashboard, layout="l-screen-inset", echo=FALSE}
-knitr::include_url("static/docs/index.html", height=800)
+knitr::include_url("widget/docs/index.html", height=800)
 ```
 
 <!--
 ```{r show.dashboard2, layout="l-screen-inset", out.height=1000, echo=FALSE}
-#htmltools::tags$iframe(src = "static/docs/index.html",
+#htmltools::tags$iframe(src = "widget/docs/index.html",
 #    scrolling = "no",
 #    frameBordder = "0",
 #    height=800,

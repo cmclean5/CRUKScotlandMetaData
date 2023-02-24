@@ -4,7 +4,7 @@ description: |
   For analysts who are familiar with routinely collected national NHS data and provides a data dictionary, data quality and summary of methods for defining cohorts, characteristics and outcomes of colorectal cancer patients.
 output: 
   distill::distill_article:
-    css: ["css/styles.css","css/accordion.css"]
+    #css: ["css/styles.css","css/accordion.css"]
 ---
 
 ```{r setup, include=FALSE}

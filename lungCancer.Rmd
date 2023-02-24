@@ -1,0 +1,19 @@
+---
+title: "Lung Cancer"
+description: |
+  For analysts who are familiar with routinely collected national NHS data and provides a data dictionary, data quality and summary of methods for defining cohorts, characteristics and outcomes of lung cancer patients.
+output: 
+  distill::distill_article:
+    #css: ["css/styles.css","css/accordion.css"]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Introduction
+:::{ .boxy .boxy-myinfo }
+
+:::
+
+# Stage 3 lung cancer

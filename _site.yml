@@ -17,10 +17,15 @@ navbar:
       menu: 
         - text: "Breast"
           href: breastCancer.html
+        - text: "Lung"
+          href: lungCancer.html
         - text: "Colorectal"
           href: colorectalCancer.html
-    - text: "Examples"
+    - text: "Training"
       menu: 
+        - text: "Students"
+          href: student_resource_1.html
+        - text: "---"
         - text: "ER & HER2 status"
           href: example_1.html
         - text: "ER & HER2 status in SBC"
