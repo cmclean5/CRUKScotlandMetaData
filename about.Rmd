@@ -17,6 +17,7 @@ author:
     affiliation_url: https://www.ed.ac.uk/cancer-centre
   - name: Maria McMenemy
 date: "`r Sys.Date()`"
+site: distill::distill_website
 ---
 
 ```{r setup, include=FALSE}

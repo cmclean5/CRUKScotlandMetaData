@@ -2,26 +2,18 @@
 title: "Breast Cancer"
 description: |
   For analysts who are familiar with routinely collected national NHS data and provides a data dictionary, data quality and summary of methods for defining cohorts, characteristics and outcomes of breast cancer patients.
-#author:
-#  - name: Peter Hall 
-#    url: https://www.ed.ac.uk/profile/peter-hall
-#    affiliation: Edinburgh Cancer Research Centre, University of Edinburgh
-#    affiliation_url: https://www.ed.ac.uk/cancer-centre
-#  - name: Mah&eacute;va Vallet
-#    url: https://www.ed.ac.uk/profile/maheva-vallet
-#    affiliation: Edinburgh Cancer Research Centre, University of Edinburgh
-#    affiliation_url: https://www.ed.ac.uk/cancer-centre
-#  - name: Giovanni Tramonti
-#    url: 
-#    affiliation: Edinburgh Cancer Research Centre, University of Edinburgh
-#    affiliation_url: https://www.ed.ac.uk/cancer-centre
-#date: "`r Sys.Date()`"
-output: distill::distill_article
+site:   distill::distill_website
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
+
+
+# Introduction
+:::{ .boxy .boxy-myinfo }
+Some text here
+:::
 
 # Early Breast Cancer
 

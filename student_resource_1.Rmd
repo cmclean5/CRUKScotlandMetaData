@@ -2,7 +2,7 @@
 title: "Student Material"
 description: |
   Getting Started
-output: distill::distill_article
+site: distill::distill_website
 ---
 
 ```{r setup, include=FALSE}
